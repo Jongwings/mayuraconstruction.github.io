@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="construction, mayura, Mayura Construction, projects, portfolio, residential, commercial, government, interior, religious, Madurai">
+    <meta name="description" content="Our Projects – Mayura Construction & Infrastructure">
+    <title>Our Projects | MAYURA CONSTRUCTION & INFRASTRUCTURE</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #C8A96E;
+            --primary-dark: #A8893E;
+            --dark: #1A1A1A;
+            --grey-dark: #3A3A3A;
+            --grey-mid: #6B6B6B;
+            --grey-light: #ABABAB;
+            --bg-off: #F7F6F4;
+            --bg-white: #FFFFFF;
+            --border: #E8E4DC;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-body); color: var(--dark); background: var(--bg-white); font-size: 15px; line-height: 1.75; }
+        h1,h2,h3,h4 { font-family: var(--font-display); }
+        a { text-decoration: none; color: inherit; }
+
+        /* ─── TOP BAR ─── */
+        .top-bar { background: var(--dark); padding: 10px 0; border-bottom: 1px solid #2a2a2a; }
+        .top-bar .logo img { height: 60px; width: auto; object-fit: contain; }
+        .top-bar-item { display: flex; align-items: center; gap: 14px; padding: 6px 0; }
+        .top-bar-icon { width: 42px; height: 42px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .top-bar-icon i { color: #fff; font-size: 16px; }
+        .top-bar-text h3 { font-family: var(--font-body); font-size: 11px; font-weight: 600; color: var(--grey-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+        .top-bar-text p, .top-bar-text a { font-size: 13px; color: #fff; display: block; }
+        .top-bar-text a:hover { color: var(--primary); }
+
+        /* ─── NAVBAR ─── */
+        .nav-bar { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+        .navbar { padding: 0; }
+        .navbar-brand { font-family: var(--font-display); font-size: 13px; color: var(--primary) !important; letter-spacing: 2px; text-transform: uppercase; display: none; }
+        .nav-item.nav-link { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--grey-dark) !important; padding: 22px 20px !important; transition: color 0.2s; position: relative; }
+        .nav-item.nav-link::after { content: ''; position: absolute; bottom: 0; left: 20px; right: 20px; height: 2px; background: var(--primary); transform: scaleX(0); transition: transform 0.25s; }
+        .nav-item.nav-link:hover::after, .nav-item.nav-link.active::after { transform: scaleX(1); }
+        .nav-item.nav-link:hover, .nav-item.nav-link.active { color: var(--primary) !important; }
+        .navbar-toggler { border-color: var(--border); }
+
+        /* ─── PAGE HEADER ─── */
+        .page-header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 80px 0 70px; text-align: center; position: relative; overflow: hidden; }
+        .page-header::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8A96E' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .section-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); margin-bottom: 12px; }
+        .page-header h1 { font-size: clamp(2rem, 4vw, 3.2rem); color: #fff; font-weight: 700; margin-bottom: 14px; position: relative; z-index: 1; }
+        .page-header p { color: rgba(255,255,255,0.6); font-size: 14.5px; max-width: 520px; margin: 0 auto; position: relative; z-index: 1; }
+        .breadcrumb-wrap { margin-top: 20px; position: relative; z-index: 1; }
+        .breadcrumb-wrap a, .breadcrumb-wrap span { font-size: 12.5px; color: rgba(255,255,255,0.45); letter-spacing: 1px; text-transform: uppercase; }
+        .breadcrumb-wrap a:hover { color: var(--primary); }
+        .breadcrumb-wrap .sep { margin: 0 8px; color: var(--primary); }
+
+        /* ─── SECTION HEADERS ─── */
+        .section-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--dark); line-height: 1.2; margin-bottom: 16px; }
+        .section-divider { width: 50px; height: 3px; background: var(--primary); margin: 16px 0 28px; }
+        .section-divider.center { margin: 16px auto 28px; }
+
+        /* ─── STATS STRIP ─── */
+        .stats-strip { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 48px 0; border-top: 3px solid var(--primary); }
+        .stat-item { text-align: center; }
+        .stat-item h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--primary); line-height: 1; margin-bottom: 6px; }
+        .stat-item p { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+
+        /* ─── GALLERY SECTION ─── */
+        .gallery-section { padding: 90px 0; background: var(--bg-off); }
+
+        /* Category Tabs */
+        .cat-tabs { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 52px; }
+        .cat-tab {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 11px 24px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: 2px solid var(--border);
+            background: #fff;
+            color: var(--grey-mid);
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+        .cat-tab i { font-size: 14px; }
+        .cat-tab:hover { border-color: var(--primary); color: var(--primary); }
+        .cat-tab.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+        /* Grid */
+        .gallery-grid { columns: 3; column-gap: 20px; }
+        @media (max-width: 991px) { .gallery-grid { columns: 2; } }
+        @media (max-width: 576px) { .gallery-grid { columns: 1; } }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.45s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.06); }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26,26,26,0.88) 0%, rgba(26,26,26,0) 55%);
+            opacity: 0;
+            transition: opacity 0.35s;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 22px 20px;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-overlay h4 { font-size: 15px; color: #fff; margin-bottom: 3px; }
+        .gallery-overlay span { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); }
+        .gallery-overlay .zoom-icon {
+            position: absolute;
+            top: 16px; right: 16px;
+            width: 38px; height: 38px;
+            background: var(--primary);
+            display: flex; align-items: center; justify-content: center;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        /* Category panel visibility */
+        .cat-panel { display: none; }
+        .cat-panel.active { display: block; }
+
+        /* ─── LIGHTBOX ─── */
+        .lightbox-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox-backdrop.open { display: flex; }
+        .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; }
+        .lightbox-inner img { max-width: 90vw; max-height: 85vh; object-fit: contain; display: block; }
+        .lightbox-close {
+            position: fixed;
+            top: 20px; right: 24px;
+            width: 44px; height: 44px;
+            background: var(--primary);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+        }
+        .lightbox-caption { color: rgba(255,255,255,0.75); font-size: 13px; margin-top: 14px; text-align: center; }
+        .lightbox-nav {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px; height: 44px;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        .lightbox-nav:hover { background: var(--primary); }
+        .lightbox-nav.prev { left: 16px; }
+        .lightbox-nav.next { right: 16px; }
+
+        /* ─── CTA STRIP ─── */
+        .cta-strip { background: var(--primary); padding: 60px 0; text-align: center; }
+        .cta-strip h2 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 10px; }
+        .cta-strip p { color: rgba(255,255,255,0.85); font-size: 14.5px; margin-bottom: 28px; }
+        .btn-cta-white { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--primary); padding: 14px 36px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: background 0.25s, color 0.25s; }
+        .btn-cta-white:hover { background: var(--dark); color: #fff; }
+
+        /* ─── CONTACT ─── */
+        .contact-section { padding: 100px 0; background: var(--dark); }
+        .contact-block { margin-bottom: 28px; }
+        .contact-block h3 { font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 6px; }
+        .contact-block p, .contact-block a { font-size: 14px; color: rgba(255,255,255,0.7); display: block; margin-bottom: 4px; }
+        .contact-block a:hover { color: var(--primary); }
+        .whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #fff; padding: 12px 24px; font-size: 13px; font-weight: 600; transition: background 0.2s; }
+        .whatsapp-btn:hover { background: #1DA851; color: #fff; }
+
+        /* ─── FOOTER ─── */
+        .footer { background: #111; padding: 70px 0 0; border-top: 3px solid var(--primary); }
+        .footer h2 { font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #222; }
+        .footer p, .footer a { font-size: 13.5px; color: rgba(255,255,255,0.55); display: block; margin-bottom: 8px; }
+        .footer a:hover { color: var(--primary); }
+        .footer-social { display: flex; gap: 10px; margin-top: 16px; }
+        .footer-social a { width: 36px; height: 36px; background: #222; color: rgba(255,255,255,0.6); display: flex; align-items: center; justify-content: center; font-size: 13px; transition: background 0.2s, color 0.2s; }
+        .footer-social a:hover { background: var(--primary); color: #fff; }
+        .footer-bottom { margin-top: 50px; padding: 20px 0; border-top: 1px solid #222; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .footer-bottom p { font-size: 12.5px; color: rgba(255,255,255,0.35); margin: 0; }
+        .footer-bottom a { display: inline; color: var(--primary); }
+        .footer-menu { display: flex; gap: 20px; flex-wrap: wrap; }
+        .footer-menu a { display: inline; font-size: 11.5px; color: rgba(255,255,255,0.4); margin: 0; }
+        .footer-menu a:hover { color: var(--primary); }
+        .newsletter-input { display: flex; margin-top: 14px; }
+        .newsletter-input input { flex: 1; padding: 11px 16px; background: #1a1a1a; border: 1px solid #2a2a2a; color: #fff; font-size: 13px; outline: none; }
+        .newsletter-input input::placeholder { color: rgba(255,255,255,0.3); }
+        .newsletter-input button { padding: 11px 20px; background: var(--primary); color: #fff; border: none; font-size: 12px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+        .newsletter-input button:hover { background: var(--primary-dark); }
+        .back-to-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: var(--primary); color: #fff; display: none; align-items: center; justify-content: center; z-index: 999; font-size: 14px; transition: background 0.2s; }
+        .back-to-top:hover { background: var(--primary-dark); color: #fff; }
+        @media (max-width: 991px) { .navbar-brand { display: block; } }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-6">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.jpg" alt="Mayura Construction Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9 d-none d-lg-block">
+                    <div class="row justify-content-end">
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-clock"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Opening Hour</h3>
+                                    <p>Mon – Sat, 8:00 – 9:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-phone"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Call Us</h3>
+                                    <a href="tel:+919487862233">+91 94878 62233</a>
+                                    <a href="tel:+919597462233">+91 95974 62233</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-envelope"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Email Us</h3>
+                                    <a href="mailto:mayuraconstruction25@gmail.com">mayuraconstruction25@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="nav-bar">
+        <div class="container-fluid px-4">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="#" class="navbar-brand">MENU</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="team.html" class="nav-item nav-link">Team</a>
+                        <a href="our-projects.html" class="nav-item nav-link active">Projects</a>
+                        <a href="package.html" class="nav-item nav-link">Packages</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <span class="section-label">Our Portfolio</span>
+        <h1>Our Projects</h1>
+        <p>Explore our completed works across residential, commercial, government, interior, and religious sectors.</p>
+        <div class="breadcrumb-wrap">
+            <a href="index.html">Home</a>
+            <span class="sep"><i class="fa fa-chevron-right" style="font-size:9px"></i></span>
+            <span style="color:rgba(255,255,255,0.7)">Our Projects</span>
+        </div>
+    </div>
+
+    <!-- STATS STRIP -->
+    <div class="stats-strip">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <h2>189+</h2>
+                        <p>Completed Projects</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <h2>485+</h2>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <h2>15+</h2>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <h2>20</h2>
+                        <p>Running Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="gallery-section">
+        <div class="container">
+            <div class="text-center mb-2">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Browse by Category</h2>
+                <div class="section-divider center"></div>
+                <p style="color:var(--grey-mid);font-size:14px;max-width:540px;margin:0 auto;">
+                    Every project reflects our commitment to quality, precision, and client satisfaction.
+                </p>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="cat-tabs mt-5">
+                <div class="cat-tab active" data-target="residential">
+                    <i class="fa fa-home"></i> Residential
+                </div>
+                <div class="cat-tab" data-target="commercial">
+                    <i class="fa fa-building"></i> Commercial
+                </div>
+                <div class="cat-tab" data-target="government">
+                    <i class="fa fa-landmark"></i> Government
+                </div>
+                <div class="cat-tab" data-target="interior">
+                    <i class="fa fa-couch"></i> Interior
+                </div>
+                <div class="cat-tab" data-target="religious">
+                    <i class="fa fa-place-of-worship"></i> Religious
+                </div>
+            </div>
+
+            <!-- ── RESIDENTIAL ── -->
+            <div class="cat-panel active" id="panel-residential">
+                <div class="gallery-grid" id="grid-residential">
+
+                    <div class="gallery-item" data-title="Modern Villa – Anna Nagar" data-cat="Residential">
+                        <img src="img/Residential/1.jpg" alt="Modern Villa">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Residential</span>
+                            <h4>Modern Villa – Anna Nagar</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Duplex Home – KK Nagar" data-cat="Residential">
+                        <img src="img/Residential/2.jpg" alt="Duplex Home">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Residential</span>
+                            <h4>Duplex Home – KK Nagar</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Family Residence – Madurai" data-cat="Residential">
+                        <img src="img/Residential/3.jpg" alt="Family Residence">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Residential</span>
+                            <h4>Family Residence – Madurai</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Bungalow – Iyer Bungalow Road" data-cat="Residential">
+                        <img src="img/Residential/4.jpg" alt="Bungalow">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Residential</span>
+                            <h4>Bungalow – Iyer Bungalow Road</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Apartment Complex – Melur Road" data-cat="Residential">
+                        <img src="img/Residential/5.jpg" alt="Apartment Complex">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Residential</span>
+                            <h4>Apartment Complex – Melur Road</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Independent House – Virattipathu" data-cat="Residential">
+                        <img src="img/Residential/6.jpg" alt="Independent House">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Residential</span>
+                            <h4>Independent House – Virattipathu</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-title="Independent House – Virattipathu" data-cat="Residential">
+                        <img src="img/Residential/10.jpg" alt="Independent House">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Residential</span>
+                            <h4>Independent House – Virattipathu</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ── COMMERCIAL ── -->
+            <div class="cat-panel" id="panel-commercial">
+                <div class="gallery-grid" id="grid-commercial">
+
+                    <div class="gallery-item" data-title="Office Complex – Mattuthavani" data-cat="Commercial">
+                        <img src="img/Commercial Projects/1.jpg" alt="Office Complex">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Commercial</span>
+                            <h4>Office Complex – Mattuthavani</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Retail Shopping Mall – Bypass Road" data-cat="Commercial">
+                        <img src="img/Commercial Projects/2.jpg" alt="Shopping Mall">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Commercial</span>
+                            <h4>Retail Mall – Bypass Road</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Showroom Building – Sivaganga Road" data-cat="Commercial">
+                        <img src="img/Commercial Projects/3.jpg" alt="Showroom Building">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Commercial</span>
+                            <h4>Showroom – Sivaganga Road</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Hotel Building – Dindigul Road" data-cat="Commercial">
+                        <img src="img/Commercial Projects/3.jpg" alt="Hotel Building">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Commercial</span>
+                            <h4>Hotel Building – Dindigul Road</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Warehouse – Thirumangalam" data-cat="Commercial">
+                        <img src="img/Commercial Projects/4.jpg" alt="Warehouse">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Commercial</span>
+                            <h4>Warehouse – Thirumangalam</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Corporate Campus – Madurai South" data-cat="Commercial">
+                        <img src="img/Commercial Projects/5.jpg" alt="Corporate Campus">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Commercial</span>
+                            <h4>Corporate Campus – Madurai South</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-title="Warehouse – Thirumangalam" data-cat="Commercial">
+                        <img src="img/Commercial Projects/6.jpeg" alt="Warehouse">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Commercial</span>
+                            <h4>Warehouse – Thirumangalam</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ── GOVERNMENT ── -->
+            <div class="cat-panel" id="panel-government">
+                <div class="gallery-grid" id="grid-government">
+
+                    <div class="gallery-item" data-title="Government School Building – Usilampatti" data-cat="Government">
+                        <img src="img/Government/1.jpg" alt="Government School">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Government</span>
+                            <h4>School Building – Usilampatti</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Panchayat Office – Peraiyur" data-cat="Government">
+                        <img src="img/Government/2.jpg" alt="Panchayat Office">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Government</span>
+                            <h4>Panchayat Office – Peraiyur</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Community Hall – Virudhunagar" data-cat="Government">
+                        <img src="img/Government/3.jpg" alt="Community Hall">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Government</span>
+                            <h4>Community Hall – Virudhunagar</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Road Bridge – Thirumangalam" data-cat="Government">
+                        <img src="img/Government/4.jpg" alt="Road Bridge">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Government</span>
+                            <h4>Road Bridge – Thirumangalam</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Primary Health Centre – Melur" data-cat="Government">
+                        <img src="img/Government/4.jpg" alt="Health Centre">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Government</span>
+                            <h4>Primary Health Centre – Melur</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-title="Primary Health Centre – Melur" data-cat="Government">
+                        <img src="img/Government/5.jpg" alt="Health Centre">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Government</span>
+                            <h4>Primary Health Centre – Melur</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-title="Primary Health Centre – Melur" data-cat="Government">
+                        <img src="img/Government/6.jpg" alt="Health Centre">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Government</span>
+                            <h4>Primary Health Centre – Melur</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="District Collectorate Annex – Madurai" data-cat="Government">
+                        <img src="img/Government/7.jpg" alt="Collectorate">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Government</span>
+                            <h4>Collectorate Annex – Madurai</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ── INTERIOR ── -->
+            <div class="cat-panel" id="panel-interior">
+                <div class="gallery-grid" id="grid-interior">
+
+                    <div class="gallery-item" data-title="Living Room Renovation – Anna Nagar" data-cat="Interior">
+                        <img src="img/Interior Projects/1.jpg" alt="Living Room">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Interior</span>
+                            <h4>Living Room Renovation – Anna Nagar</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Modular Kitchen – KK Nagar" data-cat="Interior">
+                        <img src="img/Interior Projects/2.jpg" alt="Modular Kitchen">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Interior</span>
+                            <h4>Modular Kitchen – KK Nagar</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Master Bedroom – Bypass Road" data-cat="Interior">
+                        <img src="img/Interior Projects/3.jpg" alt="Master Bedroom">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Interior</span>
+                            <h4>Master Bedroom – Bypass Road</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Office Interior – Mattuthavani" data-cat="Interior">
+                        <img src="img/Interior Projects/4.jpg" alt="Office Interior">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Interior</span>
+                            <h4>Office Interior – Mattuthavani</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-title="Office Interior – Mattuthavani" data-cat="Interior">
+                        <img src="img/Interior Projects/5.jpg" alt="Office Interior">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Interior</span>
+                            <h4>Office Interior – Mattuthavani</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-title="Office Interior – Mattuthavani" data-cat="Interior">
+                        <img src="img/Interior Projects/8.jpg" alt="Office Interior">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Interior</span>
+                            <h4>Office Interior – Mattuthavani</h4>
+                        </div>
+                    </div>
+
+                    
+                    </div>
+
+                </div>
+                
+
+            <!-- ── RELIGIOUS ── -->
+            <div class="cat-panel" id="panel-religious">
+                <div class="gallery-grid" id="grid-religious">
+
+                    <div class="gallery-item" data-title="Temple Renovation – Madurai" data-cat="Religious">
+                        <img src="img/Religious/1.jpg" alt="Temple Renovation">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Religious</span>
+                            <h4>Temple Renovation – Madurai</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Church Construction – Melur" data-cat="Religious">
+                        <img src="img/Religious/2.jpg" alt="Church Construction">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Religious</span>
+                            <h4>Church Construction – Melur</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Mosque Building – Usilampatti" data-cat="Religious">
+                        <img src="img/Religious/3.jpg" alt="Mosque Building">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Religious</span>
+                            <h4>Mosque Building – Usilampatti</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Prayer Hall – Virudhunagar" data-cat="Religious">
+                        <img src="img/Religious/p2.png" alt="Prayer Hall">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Religious</span>
+                            <h4>Prayer Hall – Virudhunagar</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Temple Gopuram – Sivaganga" data-cat="Religious">
+                        <img src="img/Religious/p4.png" alt="Temple Gopuram">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Religious</span>
+                            <h4>Temple Gopuram – Sivaganga</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-title="Kalyana Mandapam – Madurai North" data-cat="Religious">
+                        <img src="img/Religious/s10.jpg" alt="Kalyana Mandapam">
+                        <div class="gallery-overlay">
+                            <div class="zoom-icon"><i class="fa fa-search-plus"></i></div>
+                            <span>Religious</span>
+                            <h4>Kalyana Mandapam – Madurai North</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div><!-- /container -->
+    </div><!-- /gallery-section -->
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox-backdrop" id="lightbox">
+        <button class="lightbox-close" id="lbClose"><i class="fa fa-times"></i></button>
+        <button class="lightbox-nav prev" id="lbPrev"><i class="fa fa-chevron-left"></i></button>
+        <div class="lightbox-inner">
+            <img id="lbImg" src="" alt="">
+            <div class="lightbox-caption" id="lbCaption"></div>
+        </div>
+        <button class="lightbox-nav next" id="lbNext"><i class="fa fa-chevron-right"></i></button>
+    </div>
+
+    <!-- CTA STRIP -->
+    <div class="cta-strip">
+        <div class="container">
+            <h2>Ready to Start Your Dream Project?</h2>
+            <p>Talk to our team today and get a free site evaluation and detailed cost estimate.</p>
+            <a href="https://api.whatsapp.com/send?phone=+919487862233" class="btn-cta-white">
+                <i class="fab fa-whatsapp"></i> WhatsApp Us Now
+            </a>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title" style="color:#fff">Contact Us</h2>
+                <div class="section-divider center"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="contact-block">
+                        <h3><i class="fa fa-map-marker-alt mr-2"></i>Office Address</h3>
+                        <p>No.16, Muthu Thevar Colony, 3rd Cross Street,<br>Virattipathu, Madurai – 625016</p>
+                    </div>
+                    <div class="contact-block">
+                        <h3><i class="fa fa-phone mr-2"></i>Phone</h3>
+                        <a href="tel:+919487862233">+91 94878 62233</a>
+                        <a href="tel:+919597462233">+91 95974 62233</a>
+                    </div>
+                    <div class="contact-block">
+                        <h3><i class="fa fa-envelope mr-2"></i>Email</h3>
+                        <a href="mailto:mayuraconstruction25@gmail.com">mayuraconstruction25@gmail.com</a>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=+919487862233" class="whatsapp-btn mt-3">
+                        <i class="fab fa-whatsapp fa-lg"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.1!2d78.119!3d9.9252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTUnMzAuNyJOIDc4wrAwNycwOC40IkU!5e0!3m2!1sen!2sin!4v1"
+                        width="100%" height="380" style="border:0;filter:grayscale(40%)" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>No.16, Muthu Thevar Colony, 3rd Cross Street, Virattipathu, Madurai – 625016</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 94878 62233</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 95974 62233</p>
+                    <p><i class="fa fa-envelope mr-2"></i>mayuraconstruction25@gmail.com</p>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Service Areas</h2>
+                    <a href="">Building Construction</a>
+                    <a href="">House Renovation</a>
+                    <a href="">Architecture Design</a>
+                    <a href="">Interior Design</a>
+                    <a href="">Painting</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Useful Pages</h2>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="team.html">Our Team</a>
+                    <a href="our-projects.html">Projects</a>
+                    <a href="package.html">Packages</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Newsletter</h2>
+                    <p>Stay informed with the latest updates, news, and exclusive content delivered straight to your inbox.</p>
+                    <div class="newsletter-input">
+                        <input type="email" placeholder="Your email address">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <a href="">MAYURA CONSTRUCTION & INFRASTRUCTURE</a>. All Rights Reserved.</p>
+                <div class="footer-menu">
+                    <a href="">Terms of Use</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Cookies</a>
+                    <a href="">Help</a>
+                    <a href="">FAQs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top" style="display:flex"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        /* ── Category Tabs ── */
+        document.querySelectorAll('.cat-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.cat-panel').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('panel-' + this.dataset.target).classList.add('active');
+            });
+        });
+
+        /* ── Lightbox ── */
+        let currentItems = [];
+        let currentIndex = 0;
+
+        function openLightbox(img, title, items, idx) {
+            currentItems = items;
+            currentIndex = idx;
+            document.getElementById('lbImg').src = img;
+            document.getElementById('lbCaption').textContent = title;
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function showSlide(idx) {
+            const item = currentItems[idx];
+            document.getElementById('lbImg').src = item.img;
+            document.getElementById('lbCaption').textContent = item.title;
+            currentIndex = idx;
+        }
+
+        document.getElementById('lbClose').addEventListener('click', closeLightbox);
+        document.getElementById('lightbox').addEventListener('click', function (e) {
+            if (e.target === this) closeLightbox();
+        });
+        document.getElementById('lbPrev').addEventListener('click', function () {
+            showSlide((currentIndex - 1 + currentItems.length) % currentItems.length);
+        });
+        document.getElementById('lbNext').addEventListener('click', function () {
+            showSlide((currentIndex + 1) % currentItems.length);
+        });
+        document.addEventListener('keydown', function (e) {
+            if (!document.getElementById('lightbox').classList.contains('open')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showSlide((currentIndex - 1 + currentItems.length) % currentItems.length);
+            if (e.key === 'ArrowRight') showSlide((currentIndex + 1) % currentItems.length);
+        });
+
+        // Attach click handlers to all gallery items
+        function attachGalleryClicks() {
+            document.querySelectorAll('.cat-panel').forEach(panel => {
+                const items = Array.from(panel.querySelectorAll('.gallery-item'));
+                const itemData = items.map(el => ({
+                    img: el.querySelector('img').src,
+                    title: el.dataset.title + ' — ' + el.dataset.cat
+                }));
+                items.forEach((el, idx) => {
+                    el.addEventListener('click', () => openLightbox(itemData[idx].img, itemData[idx].title, itemData, idx));
+                });
+            });
+        }
+        attachGalleryClicks();
+
+        /* ── Back to top ── */
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) { $('.back-to-top').fadeIn(); }
+            else { $('.back-to-top').fadeOut(); }
+        });
+        $('.back-to-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 400);
+            return false;
+        });
+    </script>
+</body>
+</html>

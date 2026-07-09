@@ -1,100 +1,69 @@
-let navbar = document.querySelector('.header .navbar');
-let searchForm = document.querySelector('.header .search-form');
-let loginForm = document.querySelector('.header .login-form');
-let contactInfo = document.querySelector('.contact-info');
+document.addEventListener("DOMContentLoaded", function () {
+    const portfolioContainer = document.getElementById("portfolio");
+    const categories = document.querySelectorAll("nav a");
 
-document.querySelector('#menu-btn').onclick = () =>{
-   navbar.classList.toggle('active');
-   searchForm.classList.remove('active');
-   loginForm.classList.remove('active');
-};
+    // Load all items on page load
+    renderItems("all");
 
-document.querySelector('#search-btn').onclick = () =>{
-   searchForm.classList.toggle('active');
-   navbar.classList.remove('active');
-   loginForm.classList.remove('active');
-};
+    categories.forEach(function (categoryLink) {
+        categoryLink.addEventListener("click", function (e) {
+            e.preventDefault();
 
-document.querySelector('#login-btn').onclick = () =>{
-   loginForm.classList.toggle('active');
-   navbar.classList.remove('active');
-   searchForm.classList.remove('active'); 
-};
+            // Update active class
+            categories.forEach(function (link) {
+                link.classList.remove("active");
+            });
+            this.classList.add("active");
 
-document.querySelector('#info-btn').onclick = () =>{
-   contactInfo.classList.add('active');
-}
+            const categoryFilter = this.dataset.category;
+            renderItems(categoryFilter);
+        });
+    });
 
-document.querySelector('#close-contact-info').onclick = () =>{
-   contactInfo.classList.remove('active');
-}
+    function renderItems(categoryFilter) {
+        portfolioContainer.innerHTML = ""; // Clear portfolio
 
-window.onscroll = () =>{
-   navbar.classList.remove('active');
-   searchForm.classList.remove('active');
-   loginForm.classList.remove('active');
-   contactInfo.classList.remove('active');
-}
+        const filteredImages = portfolioData.filter(function (item) {
+            return categoryFilter === "all" || item.category === categoryFilter;
+        });
 
-var swiper = new Swiper(".home-slider", {
-   loop:true,
-   grabCursor:true,
-   navigation: {
-     nextEl: ".swiper-button-next",
-     prevEl: ".swiper-button-prev",
-   },
+        filteredImages.forEach(function (item) {
+            const div = document.createElement("div");
+            div.classList.add("portfolio-item");
+            div.innerHTML = '<img src="' + item.image + '" alt="' + item.title + '">';
+            portfolioContainer.appendChild(div);
+        });
+    }
 });
 
-var swiper = new Swiper(".reviews-slider", {
-   loop:true,
-   grabCursor:true,
-   spaceBetween: 20,
-   breakpoints: {
-      640: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 3,
-      },
-   },
-});
 
-var swiper = new Swiper(".blogs-slider", {
-   loop:true,
-   grabCursor:true,
-   spaceBetween: 20,
-   breakpoints: {
-      640: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 3,
-      },
-   },
-});
-
-var swiper = new Swiper(".logo-slider", {
-   loop:true,
-   grabCursor:true,
-   spaceBetween: 20,
-   breakpoints: {
-      450: {
-         slidesPerView: 2,
-       },
-      640: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      1000: {
-        slidesPerView: 5,
-      },
-   },
-});
+// Sample data for portfolio items
+const portfolioData = [
+    { category: "building-construction", image: "img/conpaint.jpg", title: "Construction" },
+    { category: "building-construction", image: "img/con1.jpg", title: "Construction" },
+    { category: "building-construction", image: "img/con2.jpg", title: "Construction" },
+    { category: "fixing-support", image: "img/fix.jpg", title: "Fixing Support" },
+    { category: "building-construction", image: "img/con3.jpg", title: "Construction" },
+    { category: "building-construction", image: "img/con4.jpg", title: "Construction" },
+    { category: "architecture-design", image: "img/int1.jpg", title: "Architecture Design" },
+    { category: "painting", image: "img/conpaint.jpg", title: "Painting" },
+    { category: "house-renovation", image: "img/hr.jpg", title: "House Renovation" },
+    { category: "house-renovation", image: "img/hr2.jpg", title: "House Renovation" },
+    { category: "house-renovation", image: "img/hr3.jpg", title: "House Renovation" },
+    { category: "building-construction", image: "img/con5.jpg", title: "Construction" },
+    { category: "architecture-design", image: "img/ad.jpg", title: "Architecture Design" },
+    { category: "building-construction", image: "img/cons.jpg", title: "Construction" },
+    { category: "building-construction", image: "img/con6.jpg", title: "Construction" },
+    { category: "building-construction", image: "img/con7.jpg", title: "Construction" },
+    { category: "building-construction", image: "img/con8.jpg", title: "Construction" },
+    { category: "architecture-design", image: "img/ad2.jpg", title: "Architecture Design" },
+    { category: "building-construction", image: "img/con9.jpg", title: "Construction" },
+    { category: "architecture-design", image: "img/ad3.jpg", title: "Architecture Design" },
+    { category: "building-construction", image: "img/con10.jpg", title: "Construction" },
+    { category: "interior-design", image: "img/id.jpg", title: "Interior Design" },
+    { category: "architecture-design", image: "img/ad4.jpg", title: "Architecture Design" },
+    { category: "building-construction", image: "img/con11.jpg", title: "Construction" },
+    { category: "painting", image: "img/paint1.jpg", title: "Painting" },
+    { category: "building-construction", image: "img/con12.jpg", title: "Construction" },
+    { category: "architecture-design", image: "img/ad5.jpg", title: "Architecture Design" },
+];

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="contact, mayura, Mayura Construction, Building, Infrastructure, Madurai">
+    <meta name="description" content="Contact Mayura Construction &amp; Infrastructure – Madurai">
+    <title>Contact Us – MAYURA CONSTRUCTION &amp; INFRASTRUCTURE</title>
+    <link rel="icon" href="img/logo.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary:#C8A96E; --primary-dark:#A8893E; --dark:#1A1A1A;
+            --grey-dark:#3A3A3A; --grey-mid:#6B6B6B; --grey-light:#ABABAB;
+            --bg-off:#F7F6F4; --bg-white:#FFFFFF; --border:#E8E4DC;
+            --font-display:'Playfair Display',serif; --font-body:'DM Sans',sans-serif;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:var(--font-body);color:var(--dark);background:var(--bg-white);font-size:15px;line-height:1.75;}
+        h1,h2,h3,h4{font-family:var(--font-display);}
+        a{text-decoration:none;color:inherit;}
+
+        /* TOP BAR */
+        .top-bar{background:var(--dark);padding:10px 0;border-bottom:1px solid #2a2a2a;}
+        .top-bar .logo img{height:60px;width:auto;object-fit:contain;}
+        .top-bar-item{display:flex;align-items:center;gap:14px;padding:6px 0;}
+        .top-bar-icon{width:42px;height:42px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+        .top-bar-icon i{color:#fff;font-size:16px;}
+        .top-bar-text h3{font-family:var(--font-body);font-size:11px;font-weight:600;color:var(--grey-light);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
+        .top-bar-text p,.top-bar-text a{font-size:13px;color:#fff;display:block;}
+        .top-bar-text a:hover{color:var(--primary);}
+
+        /* NAVBAR */
+        .nav-bar{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,0.06);}
+        .navbar{padding:0;}
+        .navbar-brand{font-family:var(--font-display);font-size:13px;color:var(--primary)!important;letter-spacing:2px;text-transform:uppercase;display:none;}
+        .nav-item.nav-link{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey-dark)!important;padding:22px 20px!important;transition:color 0.2s;position:relative;}
+        .nav-item.nav-link::after{content:'';position:absolute;bottom:0;left:20px;right:20px;height:2px;background:var(--primary);transform:scaleX(0);transition:transform 0.25s;}
+        .nav-item.nav-link:hover::after,.nav-item.nav-link.active::after{transform:scaleX(1);}
+        .nav-item.nav-link:hover,.nav-item.nav-link.active{color:var(--primary)!important;}
+        .navbar-toggler{border-color:var(--border);}
+
+        /* PAGE HEADER */
+        .page-header{background:var(--dark);padding:70px 0;position:relative;overflow:hidden;}
+        .page-header::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,169,110,0.15) 0%,transparent 60%);}
+        .page-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--primary);}
+        .page-header h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#fff;margin-bottom:12px;position:relative;}
+        .breadcrumb-nav{display:flex;align-items:center;gap:10px;position:relative;}
+        .breadcrumb-nav a{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+        .breadcrumb-nav a:hover{color:var(--primary);}
+        .breadcrumb-nav .sep{color:var(--primary);font-size:10px;}
+        .breadcrumb-nav .current{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--primary);}
+
+        /* SECTION */
+        .section-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--primary);margin-bottom:12px;}
+        .section-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:var(--dark);line-height:1.2;margin-bottom:16px;}
+        .section-divider{width:50px;height:3px;background:var(--primary);margin:16px 0 28px;}
+        .section-divider.center{margin:16px auto 28px;}
+
+        /* INFO CARDS */
+        .contact-section{padding:90px 0 60px;background:var(--bg-white);}
+        .info-card{background:var(--bg-off);padding:36px 28px;border:1px solid var(--border);margin-bottom:24px;display:flex;align-items:flex-start;gap:20px;transition:box-shadow 0.3s;height:100%;}
+        .info-card:hover{box-shadow:0 16px 40px rgba(0,0,0,0.07);}
+        .info-icon{width:54px;height:54px;background:var(--primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+        .info-icon i{font-size:20px;color:#fff;}
+        .info-card h3{font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--primary);margin-bottom:10px;}
+        .info-card p,.info-card a{font-size:14px;color:var(--grey-mid);display:block;margin-bottom:4px;}
+        .info-card a:hover{color:var(--primary);}
+        .whatsapp-btn{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff!important;padding:9px 18px;font-size:13px;font-weight:600;margin-top:12px;transition:background 0.2s;}
+        .whatsapp-btn:hover{background:#1DA851;}
+
+        /* FORM */
+        .contact-form-section{padding:0 0 90px;background:var(--bg-white);}
+        .form-wrap{background:var(--bg-off);padding:44px 40px;border:1px solid var(--border);}
+        .form-wrap .control-group{margin-bottom:20px;}
+        .form-wrap .control-group.success .form-control{border-color:#28a745;}
+        .form-wrap .control-group.warning .form-control{border-color:#ffc107;}
+        .form-wrap .control-group.error   .form-control{border-color:#dc3545;}
+        .form-wrap .help-block{font-size:12px;color:#dc3545;margin-top:4px;display:block;min-height:18px;}
+        .form-wrap .form-control{border:1px solid var(--border);border-radius:0;padding:13px 16px;font-size:14px;font-family:var(--font-body);color:var(--dark);background:#fff;transition:border-color 0.2s;width:100%;}
+        .form-wrap .form-control:focus{border-color:var(--primary);box-shadow:none;outline:none;}
+        .form-wrap textarea.form-control{height:140px;resize:vertical;}
+        #success .alert{border-radius:0;font-size:14px;margin-top:16px;}
+        #success .alert-success{background:#f0faf4;border-color:#28a745;color:#155724;}
+        #success .alert-danger{background:#fff5f5;border-color:#dc3545;color:#721c24;}
+        #sendMessageButton{display:inline-flex;align-items:center;gap:10px;background:var(--primary);color:#fff;padding:14px 36px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:background 0.25s,transform 0.2s;font-family:var(--font-body);}
+        #sendMessageButton:hover:not(:disabled){background:var(--primary-dark);transform:translateY(-2px);}
+        #sendMessageButton:disabled{opacity:0.7;cursor:not-allowed;}
+        .map-frame{display:block;filter:grayscale(15%);border:none;}
+
+        /* FOOTER */
+        .footer{background:#111;padding:70px 0 0;border-top:3px solid var(--primary);}
+        .footer h2{font-family:var(--font-body);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--primary);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid #222;}
+        .footer p,.footer a{font-size:13.5px;color:rgba(255,255,255,0.55);display:block;margin-bottom:8px;}
+        .footer a:hover{color:var(--primary);}
+        .footer-social{display:flex;gap:10px;margin-top:16px;}
+        .footer-social a{width:36px;height:36px;background:#222;color:rgba(255,255,255,0.6);display:flex;align-items:center;justify-content:center;font-size:13px;transition:background 0.2s,color 0.2s;}
+        .footer-social a:hover{background:var(--primary);color:#fff;}
+        .footer-bottom{margin-top:50px;padding:20px 0;border-top:1px solid #222;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+        .footer-bottom p{font-size:12.5px;color:rgba(255,255,255,0.35);margin:0;}
+        .footer-bottom a{display:inline;color:var(--primary);}
+        .footer-menu{display:flex;gap:20px;flex-wrap:wrap;}
+        .footer-menu a{display:inline;font-size:11.5px;color:rgba(255,255,255,0.4);margin:0;}
+        .footer-menu a:hover{color:var(--primary);}
+        .newsletter-input{display:flex;margin-top:14px;}
+        .newsletter-input input{flex:1;padding:11px 16px;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;font-size:13px;outline:none;}
+        .newsletter-input input::placeholder{color:rgba(255,255,255,0.3);}
+        .newsletter-input button{padding:11px 20px;background:var(--primary);color:#fff;border:none;font-size:12px;font-weight:700;cursor:pointer;transition:background 0.2s;}
+        .newsletter-input button:hover{background:var(--primary-dark);}
+        .back-to-top{position:fixed;right:28px;bottom:28px;width:44px;height:44px;background:var(--primary);color:#fff;display:none;align-items:center;justify-content:center;font-size:14px;z-index:999;transition:background 0.2s;}
+        .back-to-top:hover{background:var(--primary-dark);color:#fff;}
+
+        @media(max-width:991px){.navbar-brand{display:block;}}
+        @media(max-width:768px){.form-wrap{padding:28px 20px;}}
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-6">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.jpg"" alt="Mayura Construction Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9 d-none d-lg-block">
+                    <div class="row justify-content-end">
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-clock"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Opening Hour</h3>
+                                    <p>Mon &ndash; Sat, 8:00 &ndash; 9:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-phone"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Call Us</h3>
+                                    <a href="tel:+919487862233">+91 94878 62233</a>
+                                    <a href="tel:+919597462233">+91 95974 62233</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-envelope"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Email Us</h3>
+                                    <a href="mailto:mayuraconstruction25@gmail.com">mayuraconstruction25@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="nav-bar">
+        <div class="container-fluid px-4">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="index.html" class="navbar-brand">MAYURA</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="index.html"     class="nav-item nav-link">Home</a>
+                        <a href="about.html"     class="nav-item nav-link">About</a>
+                        <a href="service.html"   class="nav-item nav-link">Service</a>
+                        <a href="team.html"      class="nav-item nav-link">Team</a>
+                        <a href="package.html" class="nav-item nav-link">Packages</a>
+                        <a href="our-projects.html" class="nav-item nav-link">Portfolio</a>
+                        <a href="contact.html"   class="nav-item nav-link active">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <span class="sep"><i class="fa fa-chevron-right"></i></span>
+                <span class="current">Contact Us</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- INFO CARDS -->
+    <div class="contact-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">We'd Love to Hear From You</h2>
+                <div class="section-divider center"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa fa-map-marker-alt"></i></div>
+                        <div>
+                            <h3>Office Address</h3>
+                            <p>MAYURA CONSTRUCTION &amp; INFRASTRUCTURE</p>
+                            <p>No.16, Muthu Thevar Colony,</p>
+                            <p>3rd Cross Street, Virattipathu,</p>
+                            <p>Madurai &ndash; 625016</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa fa-phone-alt"></i></div>
+                        <div>
+                            <h3>Phone</h3>
+                            <a href="tel:+919487862233">+91 94878 62233</a>
+                            <a href="tel:+919597462233">+91 95974 62233</a>
+                            <a href="https://api.whatsapp.com/send?phone=919487862233" class="whatsapp-btn" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa fa-envelope"></i></div>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:mayuraconstruction25@gmail.com">mayuraconstruction25@gmail.com</a>
+                            <p style="margin-top:10px;font-size:13px;color:var(--grey-light);">Mon &ndash; Sat, 8:00 AM &ndash; 9:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT FORM + MAP -->
+    <div class="contact-form-section">
+        <div class="container">
+            <div class="row">
+
+                <!-- FORM -->
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <span class="section-label">Send a Message</span>
+                    <h2 class="section-title">For Any Query</h2>
+                    <div class="section-divider"></div>
+
+                    <div class="form-wrap">
+                        <!--
+                          id="contactForm"        → required by contact.js
+                          Field IDs: #name #email #phone #subject #message
+                          Button id: #sendMessageButton
+                          Alert div: #success
+                        -->
+                        <form id="contactForm" novalidate>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="control-group">
+                                        <input type="text" id="name" name="name" class="form-control"
+                                               placeholder="Your Full Name *" required
+                                               data-validation-required-message="Please enter your name.">
+                                        <p class="help-block"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="control-group">
+                                        <input type="email" id="email" name="email" class="form-control"
+                                               placeholder="Your Email Address *" required
+                                               data-validation-required-message="Please enter a valid email.">
+                                        <p class="help-block"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <input type="tel" id="phone" name="phone" class="form-control"
+                                       placeholder="Phone Number (optional)">
+                                <p class="help-block"></p>
+                            </div>
+
+                            <div class="control-group">
+                                <input type="text" id="subject" name="subject" class="form-control"
+                                       placeholder="Subject *" required
+                                       data-validation-required-message="Please enter a subject.">
+                                <p class="help-block"></p>
+                            </div>
+
+                            <div class="control-group">
+                                <textarea id="message" name="message" class="form-control"
+                                          placeholder="Your Message *" required
+                                          data-validation-required-message="Please enter your message."></textarea>
+                                <p class="help-block"></p>
+                            </div>
+
+                            <!-- Success / Error alert injected here by contact.js -->
+                            <div id="success"></div>
+
+                            <button type="submit" id="sendMessageButton">
+                                Send Message <i class="fa fa-paper-plane"></i>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+
+                <!-- MAP -->
+                <div class="col-lg-5">
+                    <span class="section-label">Our Location</span>
+                    <h2 class="section-title">Find Us on the Map</h2>
+                    <div class="section-divider"></div>
+                    <iframe class="map-frame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.415279022223!2d78.0784079!3d9.9367194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf007b838773%3A0xa3c7e28b88de8271!2sMAYURA%20Construction%20and%20Infrastructure!5e1!3m2!1sen!2sus!4v1750931095390!5m2!1sen!2sus"
+                        width="100%" height="400" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>No.16, Muthu Thevar Colony, 3rd Cross Street, Virattipathu, Madurai &ndash; 625016</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 94878 62233</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 95974 62233</p>
+                    <p><i class="fa fa-envelope mr-2"></i>mayuraconstruction25@gmail.com</p>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Service Areas</h2>
+                    <a href="service.html">Building Construction</a>
+                    <a href="service.html">House Renovation</a>
+                    <a href="service.html">Architecture Design</a>
+                    <a href="service.html">Interior Design</a>
+                    <a href="service.html">Painting</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Useful Pages</h2>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="team.html">Our Team</a>
+                    <a href="portfolio.html">Projects</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Newsletter</h2>
+                    <p>Stay informed with the latest updates and exclusive content delivered straight to your inbox.</p>
+                    <div class="newsletter-input">
+                        <input type="email" placeholder="Your email address">
+                        <button type="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <a href="index.html">MAYURA CONSTRUCTION &amp; INFRASTRUCTURE</a>. All Rights Reserved.</p>
+                <div class="footer-menu">
+                    <a href="">Terms of Use</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Cookies</a>
+                    <a href="">Help</a>
+                    <a href="">FAQs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Place jqBootstrapValidation.min.js and contact.js in the mail/ folder -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                $(this).scrollTop() > 200 ? $('.back-to-top').fadeIn() : $('.back-to-top').fadeOut();
+            });
+            $('.back-to-top').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 400);
+                return false;
+            });
+            new WOW().init();
+        });
+    </script>
+</body>
+</html>

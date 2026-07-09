@@ -1,0 +1,2284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="construction, mayura, Mayura Construction, Building, Infrastructure, Madurai, packages">
+    <meta name="description" content="Construction Packages – Mayura Construction & Infrastructure">
+    <title>Packages | MAYURA CONSTRUCTION & INFRASTRUCTURE</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #C8A96E;
+            --primary-dark: #A8893E;
+            --dark: #1A1A1A;
+            --grey-dark: #3A3A3A;
+            --grey-mid: #6B6B6B;
+            --grey-light: #ABABAB;
+            --bg-off: #F7F6F4;
+            --bg-white: #FFFFFF;
+            --border: #E8E4DC;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--dark);
+            background: var(--bg-white);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        h1, h2, h3, h4 { font-family: var(--font-display); }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* ─── TOP BAR ─── */
+        .top-bar {
+            background: var(--dark);
+            padding: 10px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .top-bar .logo img { height: 60px; width: auto; object-fit: contain; }
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 6px 0;
+        }
+        .top-bar-icon {
+            width: 42px; height: 42px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .top-bar-icon i { color: #fff; font-size: 16px; }
+        .top-bar-text h3 { font-family: var(--font-body); font-size: 11px; font-weight: 600; color: var(--grey-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+        .top-bar-text p, .top-bar-text a { font-size: 13px; color: #fff; display: block; }
+        .top-bar-text a:hover { color: var(--primary); }
+
+        /* ─── NAVBAR ─── */
+        .nav-bar {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .navbar { padding: 0; }
+        .navbar-brand { font-family: var(--font-display); font-size: 13px; color: var(--primary) !important; letter-spacing: 2px; text-transform: uppercase; display: none; }
+        .nav-item.nav-link {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--grey-dark) !important;
+            padding: 22px 20px !important;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .nav-item.nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 20px; right: 20px;
+            height: 2px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.25s;
+        }
+        .nav-item.nav-link:hover::after,
+        .nav-item.nav-link.active::after { transform: scaleX(1); }
+        .nav-item.nav-link:hover,
+        .nav-item.nav-link.active { color: var(--primary) !important; }
+        .navbar-toggler { border-color: var(--border); }
+
+        /* ─── PAGE HEADER ─── */
+        .page-header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 80px 0 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8A96E' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .page-header .section-label {
+            color: var(--primary);
+        }
+        .page-header h1 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+        .page-header p {
+            color: rgba(255,255,255,0.6);
+            font-size: 14.5px;
+            max-width: 520px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .breadcrumb-wrap {
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .breadcrumb-wrap a,
+        .breadcrumb-wrap span {
+            font-size: 12.5px;
+            color: rgba(255,255,255,0.45);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .breadcrumb-wrap a:hover { color: var(--primary); }
+        .breadcrumb-wrap .sep { margin: 0 8px; color: var(--primary); }
+
+        /* ─── SECTION HEADERS ─── */
+        .section-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        .section-divider {
+            width: 50px; height: 3px;
+            background: var(--primary);
+            margin: 16px 0 28px;
+        }
+        .section-divider.center { margin: 16px auto 28px; }
+
+        /* ─── PACKAGES SECTION ─── */
+        .packages-section {
+            padding: 100px 0;
+            background: var(--bg-off);
+        }
+
+        /* Toggle */
+        .pkg-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 52px;
+        }
+        .pkg-toggle span {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--grey-mid);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toggle-switch {
+            position: relative;
+            width: 54px; height: 28px;
+            cursor: pointer;
+        }
+        .toggle-switch input { display: none; }
+        .toggle-track {
+            position: absolute;
+            inset: 0;
+            background: var(--border);
+            border-radius: 14px;
+            transition: background 0.3s;
+        }
+        .toggle-switch input:checked + .toggle-track { background: var(--primary); }
+        .toggle-thumb {
+            position: absolute;
+            top: 4px; left: 4px;
+            width: 20px; height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            transition: transform 0.3s;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        }
+        .toggle-switch input:checked ~ .toggle-thumb { transform: translateX(26px); }
+        .badge-save {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-left: 6px;
+        }
+
+        /* Cards */
+        .pkg-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 44px 38px 40px;
+            margin-bottom: 28px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .pkg-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.09);
+        }
+        .pkg-card.featured {
+            border-color: var(--primary);
+            border-width: 2px;
+        }
+        .pkg-badge {
+            position: absolute;
+            top: -1px; right: 28px;
+            background: var(--primary);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+        }
+        .pkg-tier {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .pkg-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+        .pkg-tagline {
+            font-size: 13.5px;
+            color: var(--grey-mid);
+            margin-bottom: 28px;
+            line-height: 1.55;
+        }
+        .pkg-price {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+        }
+        .pkg-currency {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--grey-dark);
+            line-height: 1;
+            padding-bottom: 8px;
+        }
+        .pkg-amount {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1;
+        }
+        .pkg-unit {
+            font-size: 13px;
+            color: var(--grey-mid);
+            padding-bottom: 8px;
+        }
+        .pkg-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 32px;
+            flex: 1;
+        }
+        .pkg-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 13.5px;
+            color: var(--grey-dark);
+            padding: 9px 0;
+            border-bottom: 1px solid var(--bg-off);
+        }
+        .pkg-features li:last-child { border-bottom: none; }
+        .pkg-features li i {
+            color: var(--primary);
+            font-size: 13px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        .pkg-features li.disabled { color: var(--grey-light); }
+        .pkg-features li.disabled i { color: var(--grey-light); }
+        .btn-pkg {
+            display: block;
+            text-align: center;
+            padding: 14px 28px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            transition: all 0.25s;
+        }
+        .btn-pkg:hover, .pkg-card.featured .btn-pkg {
+            background: var(--primary);
+            color: #fff;
+        }
+        .pkg-card.featured .btn-pkg:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            color: #fff;
+        }
+
+        /* ─── COST CALCULATOR ─── */
+        .calc-section { padding: 100px 0; background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); position: relative; overflow: hidden; }
+        .calc-section::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8A96E' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .calc-section .container { position: relative; z-index: 1; }
+        .calc-section .section-title { color: #fff; }
+        .calc-section p.calc-sub { color: rgba(255,255,255,0.6); font-size: 14px; max-width: 560px; margin: 0 auto; }
+        .calc-wrap {
+            background: #fff;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+        }
+        @media (max-width: 991px) { .calc-wrap { grid-template-columns: 1fr; } }
+
+        .calc-form { padding: 44px 48px; }
+        .calc-step { margin-bottom: 32px; }
+        .calc-step:last-child { margin-bottom: 0; }
+        .calc-step-label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--dark);
+            margin-bottom: 14px;
+        }
+        .calc-step-label span { color: var(--primary); }
+        .pill-group { display: flex; flex-wrap: wrap; gap: 10px; }
+        .pill-option { position: relative; }
+        .pill-option input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+        .pill-option label {
+            display: block;
+            padding: 10px 18px;
+            border: 1.5px solid var(--border);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--grey-dark);
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .pill-option input:checked + label {
+            background: var(--dark);
+            border-color: var(--dark);
+            color: #fff;
+        }
+        .pill-option.pkg-pill label { display: flex; flex-direction: column; gap: 2px; }
+        .pill-option.pkg-pill small { font-weight: 400; opacity: 0.75; font-size: 11px; }
+        .floor-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .floor-input-row { display: none; }
+        .floor-input-row.active { display: block; }
+        .floor-input-row label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--grey-mid);
+            margin-bottom: 6px;
+        }
+        .calc-input-group { position: relative; }
+        .calc-input-group input {
+            width: 100%;
+            padding: 12px 44px 12px 16px;
+            border: 1.5px solid var(--border);
+            font-size: 14px;
+            font-family: var(--font-body);
+            color: var(--dark);
+            transition: border-color 0.2s;
+        }
+        .calc-input-group input:focus { outline: none; border-color: var(--primary); }
+        .calc-input-group span {
+            position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+            font-size: 11px; color: var(--grey-light); font-weight: 600; text-transform: uppercase;
+        }
+
+        .calc-summary { background: var(--dark); color: #fff; padding: 44px 36px; display: flex; flex-direction: column; }
+        .calc-summary h4 { font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 24px; }
+        .calc-line { display: flex; justify-content: space-between; align-items: center; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 13px; }
+        .calc-line span:first-child { color: rgba(255,255,255,0.55); }
+        .calc-line span:last-child { color: #fff; font-weight: 600; }
+        .calc-total { margin-top: auto; padding-top: 26px; }
+        .calc-total-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 6px; }
+        .calc-total-amount { font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; color: var(--primary); line-height: 1; margin-bottom: 24px; word-break: break-word; }
+        .btn-calc-cta {
+            display: block; text-align: center; padding: 15px 20px;
+            background: var(--primary); color: #fff; font-size: 12.5px; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase; transition: background 0.2s;
+        }
+        .btn-calc-cta:hover { background: var(--primary-dark); color: #fff; }
+        .calc-note { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 14px; text-align: center; }
+
+        /* ─── COMPARE TABLE ─── */
+        .compare-section {
+            padding: 90px 0;
+            background: var(--bg-white);
+        }
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+        }
+        .compare-table th, .compare-table td {
+            padding: 16px 20px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .compare-table thead th {
+            background: var(--dark);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .compare-table thead th:first-child {
+            background: #111;
+            text-align: left;
+        }
+        .compare-table thead th.featured-col {
+            background: var(--primary);
+        }
+        .compare-table tbody tr:nth-child(even) td { background: var(--bg-off); }
+        .compare-table tbody tr:hover td { background: #fdf9f3; }
+        .compare-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: var(--grey-dark);
+        }
+        .compare-table .check { color: var(--primary); font-size: 16px; }
+        .compare-table .cross { color: var(--grey-light); font-size: 16px; }
+
+        /* ─── FAQ ─── */
+        .faq-section { padding: 90px 0; background: var(--bg-off); }
+        .faq-card { border: 1px solid var(--border); margin-bottom: 10px; background: #fff; }
+        .faq-card .card-header { background: #fff; border-bottom: none; padding: 0; }
+        .faq-card .card-link {
+            display: block;
+            padding: 18px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        .faq-card .card-link:hover { color: var(--primary); }
+        .faq-card .card-body { padding: 0 24px 18px; font-size: 13.5px; color: var(--grey-mid); }
+
+        /* ─── CTA STRIP ─── */
+        .cta-strip {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+        }
+        .cta-strip h2 {
+            color: #fff;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            margin-bottom: 10px;
+        }
+        .cta-strip p {
+            color: rgba(255,255,255,0.85);
+            font-size: 14.5px;
+            margin-bottom: 28px;
+        }
+        .btn-cta-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            color: var(--primary);
+            padding: 14px 36px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: none;
+            transition: background 0.25s, color 0.25s;
+        }
+        .btn-cta-white:hover { background: var(--dark); color: #fff; }
+
+        /* ─── CONTACT / FOOTER (same as index) ─── */
+        .contact-section { padding: 100px 0; background: var(--dark); }
+        .contact-block { margin-bottom: 28px; }
+        .contact-block h3 { font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 6px; }
+        .contact-block p, .contact-block a { font-size: 14px; color: rgba(255,255,255,0.7); display: block; margin-bottom: 4px; }
+        .contact-block a:hover { color: var(--primary); }
+        .whatsapp-btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: #25D366; color: #fff;
+            padding: 12px 24px; font-size: 13px; font-weight: 600;
+            transition: background 0.2s;
+        }
+        .whatsapp-btn:hover { background: #1DA851; color: #fff; }
+
+        .footer { background: #111; padding: 70px 0 0; border-top: 3px solid var(--primary); }
+        .footer h2 { font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #222; }
+        .footer p, .footer a { font-size: 13.5px; color: rgba(255,255,255,0.55); display: block; margin-bottom: 8px; }
+        .footer a:hover { color: var(--primary); }
+        .footer-social { display: flex; gap: 10px; margin-top: 16px; }
+        .footer-social a { width: 36px; height: 36px; background: #222; color: rgba(255,255,255,0.6); display: flex; align-items: center; justify-content: center; font-size: 13px; transition: background 0.2s, color 0.2s; }
+        .footer-social a:hover { background: var(--primary); color: #fff; }
+        .footer-bottom { margin-top: 50px; padding: 20px 0; border-top: 1px solid #222; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .footer-bottom p { font-size: 12.5px; color: rgba(255,255,255,0.35); margin: 0; }
+        .footer-bottom a { display: inline; color: var(--primary); }
+        .footer-menu { display: flex; gap: 20px; flex-wrap: wrap; }
+        .footer-menu a { display: inline; font-size: 11.5px; color: rgba(255,255,255,0.4); margin: 0; }
+        .footer-menu a:hover { color: var(--primary); }
+        .newsletter-input { display: flex; margin-top: 14px; }
+        .newsletter-input input { flex: 1; padding: 11px 16px; background: #1a1a1a; border: 1px solid #2a2a2a; color: #fff; font-size: 13px; outline: none; }
+        .newsletter-input input::placeholder { color: rgba(255,255,255,0.3); }
+        .newsletter-input button { padding: 11px 20px; background: var(--primary); color: #fff; border: none; font-size: 12px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+        .newsletter-input button:hover { background: var(--primary-dark); }
+
+        .back-to-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: var(--primary); color: #fff; display: none; align-items: center; justify-content: center; z-index: 999; font-size: 14px; transition: background 0.2s; }
+        .back-to-top:hover { background: var(--primary-dark); color: #fff; }
+
+        @media (max-width: 991px) {
+            .navbar-brand { display: block; }
+            .pkg-card { margin-bottom: 24px; }
+        }
+        @media (max-width: 576px) {
+            .compare-table { font-size: 12px; }
+            .compare-table th, .compare-table td { padding: 12px 10px; }
+        }
+
+        /* ═══════════════════════════════════════════════════
+           NEW PREMIUM SECTIONS (inserted between Pricing & FAQ)
+           ═══════════════════════════════════════════════════ */
+
+        /* ─── SPECS TABLE ─── */
+        .specs-section { padding: 90px 0; background: var(--bg-white); }
+        .specs-table-wrap { border: 1px solid var(--border); }
+        .specs-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+        .specs-table th, .specs-table td { padding: 14px 22px; border: 1px solid var(--border); }
+        .specs-table thead th {
+            background: var(--dark);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-align: left;
+        }
+        .specs-table tbody tr:nth-child(even) td { background: var(--bg-off); }
+        .specs-table tbody tr:hover td { background: #fdf9f3; }
+        .specs-table td.spec-cat {
+            font-weight: 700;
+            color: var(--primary-dark);
+            white-space: nowrap;
+            width: 18%;
+        }
+        .specs-table td.spec-item {
+            font-weight: 600;
+            color: var(--grey-dark);
+            width: 27%;
+        }
+        .specs-table td.spec-val { color: var(--grey-mid); }
+        .specs-table tbody tr.cat-start td.spec-cat { border-top: 2px solid var(--primary); }
+
+        /* ─── WHAT'S INCLUDED ─── */
+        .included-section { padding: 90px 0; background: var(--bg-off); }
+        .included-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 34px 22px;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+        .included-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+        }
+        .included-icon {
+            width: 64px; height: 64px;
+            margin: 0 auto 18px;
+            background: var(--bg-off);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.3s;
+        }
+        .included-card:hover .included-icon { background: var(--primary); }
+        .included-icon i { font-size: 24px; color: var(--primary); transition: color 0.3s; }
+        .included-card:hover .included-icon i { color: #fff; }
+        .included-card h4 {
+            font-family: var(--font-body);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* ─── PROCESS TIMELINE ─── */
+        .process-section { padding: 90px 0; background: var(--bg-white); }
+        .process-track { position: relative; }
+        .process-track::before {
+            content: '';
+            position: absolute;
+            top: 30px; left: 0; right: 0;
+            height: 2px;
+            background: var(--border);
+        }
+        .process-step { position: relative; text-align: center; margin-bottom: 36px; }
+        .process-num {
+            width: 60px; height: 60px;
+            margin: 0 auto 20px;
+            background: #fff;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            position: relative;
+            z-index: 2;
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            transition: background 0.3s, color 0.3s;
+        }
+        .process-step:hover .process-num { background: var(--primary); color: #fff; }
+        .process-step h4 {
+            font-family: var(--font-body);
+            font-size: 13.5px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        .process-step p { font-size: 12.5px; color: var(--grey-mid); margin: 0; padding: 0 8px; }
+        @media (max-width: 991px) {
+            .process-track::before { display: none; }
+        }
+
+        /* ─── MATERIAL BRANDS ─── */
+        .brands-section { padding: 80px 0; background: var(--bg-off); }
+        .brand-box {
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 26px 16px;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 96px;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+        .brand-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 36px rgba(0,0,0,0.07);
+            border-color: var(--primary);
+        }
+        .brand-box span {
+            font-family: var(--font-display);
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--grey-dark);
+            letter-spacing: 0.3px;
+        }
+        .brand-box:hover span { color: var(--primary-dark); }
+
+        /* ─── WHY CHOOSE US ─── */
+        .why-section { padding: 90px 0; background: var(--bg-white); }
+        .why-card {
+            background: var(--bg-off);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--primary);
+            padding: 32px 28px;
+            height: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .why-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            background: #fff;
+        }
+        .why-icon {
+            width: 50px; height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+        }
+        .why-icon i { color: #fff; font-size: 19px; }
+        .why-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+        .why-card p { font-size: 13px; color: var(--grey-mid); margin: 0; line-height: 1.6; }
+
+        /* ─── GALLERY ─── */
+        .gallery-section { padding: 90px 0; background: var(--bg-off); }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 24px;
+            height: 240px;
+        }
+        .gallery-item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+            display: block;
+        }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(26,26,26,0.85) 0%, rgba(26,26,26,0.1) 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 18px 20px;
+            opacity: 0;
+            transition: opacity 0.35s;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-item:hover img { transform: scale(1.08); }
+        .gallery-overlay span {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .gallery-overlay span i { color: var(--primary); margin-right: 8px; }
+
+        /* ─── TESTIMONIALS ─── */
+        .testimonial-section { padding: 90px 0; background: var(--bg-white); }
+        .testimonial-card {
+            background: var(--bg-off);
+            border: 1px solid var(--border);
+            padding: 34px 30px;
+            height: 100%;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+        .testimonial-card .quote-icon { color: var(--primary); font-size: 22px; opacity: 0.4; margin-bottom: 14px; }
+        .testimonial-card p.t-text { font-size: 13.5px; color: var(--grey-dark); line-height: 1.7; margin-bottom: 22px; }
+        .testimonial-stars { color: var(--primary); font-size: 12px; margin-bottom: 14px; }
+        .testimonial-author { display: flex; align-items: center; gap: 14px; }
+        .testimonial-avatar {
+            width: 46px; height: 46px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        .testimonial-author h5 { font-size: 13.5px; font-weight: 700; color: var(--dark); margin: 0; }
+        .testimonial-author span { font-size: 11.5px; color: var(--grey-mid); }
+
+        /* ─── DETAILED PACKAGE BREAKDOWN (accordion) ─── */
+        .pkg-detail-section { padding: 90px 0; background: var(--bg-off); }
+        .pkg-detail-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        .pkg-detail-header {
+            color: #fff;
+            text-align: center;
+            padding: 26px 18px;
+            background: var(--dark);
+        }
+        .pkg-detail-header.tier-mid { background: var(--primary-dark); }
+        .pkg-detail-header.tier-top { background: var(--primary); }
+        .pkg-detail-header h5 {
+            margin: 0;
+            font-family: var(--font-body);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+        }
+        .pkg-detail-header h3 {
+            margin: 8px 0 0;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .pkg-detail-card .card-header {
+            padding: 0;
+            background: #fff;
+            border-bottom: 1px solid var(--bg-off);
+        }
+        .pkg-detail-card .card-header button {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            text-align: left;
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--grey-dark);
+            background: none;
+            border: none;
+        }
+        .pkg-detail-card .card-header button:hover,
+        .pkg-detail-card .card-header button:focus {
+            text-decoration: none;
+            color: var(--primary-dark);
+        }
+        .pkg-detail-card .card-body { padding: 4px 20px 16px; }
+        .pkg-detail-card .card-body ul { list-style: none; padding-left: 0; margin: 0; }
+        .pkg-detail-card .card-body li {
+            font-size: 13px;
+            color: var(--grey-mid);
+            padding: 5px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .pkg-detail-card .card-body li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary);
+            font-size: 11px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        .btn-pkg-quote {
+            margin: 22px 20px 24px;
+            display: block;
+            text-align: center;
+            padding: 13px 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: none;
+            transition: all 0.25s;
+        }
+        .btn-pkg-quote:hover { background: var(--primary); color: #fff; }
+        .pkg-detail-note {
+            text-align: center;
+            font-size: 12.5px;
+            color: var(--grey-mid);
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-6">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/logo.jpg" alt="Mayura Construction Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 d-none d-lg-block">
+                    <div class="row justify-content-end">
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-clock"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Opening Hour</h3>
+                                    <p>Mon – Sat, 8:00 – 9:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-phone"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Call Us</h3>
+                                    <a href="tel:+919487862233">+91 94878 62233</a>
+                                    <a href="tel:+919597462233">+91 95974 62233</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-envelope"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Email Us</h3>
+                                    <a href="mailto:mayuraconstruction25@gmail.com">mayuraconstruction25@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="nav-bar">
+        <div class="container-fluid px-4">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="#" class="navbar-brand">MENU</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="team.html" class="nav-item nav-link">Team</a>
+                        <a href="package.html" class="nav-item nav-link active">Packages</a>
+                         <a href="our-projects.html" class="nav-item nav-link">Portfolio</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <span class="section-label">Transparent Pricing</span>
+        <h1>Our Construction Packages</h1>
+        <p>Choose the plan that fits your project — every package backed by our quality guarantee and dedicated project management.</p>
+        <div class="breadcrumb-wrap">
+            <a href="index.html">Home</a>
+            <span class="sep"><i class="fa fa-chevron-right" style="font-size:9px"></i></span>
+            <span style="color:rgba(255,255,255,0.7)">Packages</span>
+        </div>
+    </div>
+
+    <!-- PACKAGES -->
+    <div class="packages-section">
+        <div class="container">
+            <div class="text-center mb-2">
+                <span class="section-label">Pricing Plans</span>
+                <h2 class="section-title">Pick the Right Package</h2>
+                <div class="section-divider center"></div>
+                <p style="color:var(--grey-mid);font-size:14px;max-width:560px;margin:0 auto 20px;">
+                    All packages include a dedicated project manager, quality material sourcing, and a structured handover process.
+                </p>
+            </div>
+
+            <!-- Billing Toggle -->
+            <div class="pkg-toggle">
+                <span>Per Sq.ft</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="billingToggle">
+                    <div class="toggle-track"></div>
+                    <div class="toggle-thumb"></div>
+                </label>
+                <span>Full Project <span class="badge-save">Save 5%</span></span>
+            </div>
+
+            <div class="row">
+                <!-- Basic -->
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="pkg-card w-100">
+                        <div class="pkg-tier">Starter</div>
+                        <div class="pkg-name">Basic</div>
+                        <p class="pkg-tagline">Ideal for budget-conscious builds with solid fundamentals and proven materials.</p>
+                        <div class="pkg-price">
+                            <span class="pkg-currency">₹</span>
+                            <span class="pkg-amount price-val" data-sqft="2500" data-project="28,50,000">2500</span>
+                            <span class="pkg-unit">/ sq.ft</span>
+                        </div>
+                        <ul class="pkg-features">
+                            <li><i class="fa fa-check-circle"></i> Standard cement &amp; brick construction</li>
+                            <li><i class="fa fa-check-circle"></i> Basic plumbing &amp; electrical wiring</li>
+                            <li><i class="fa fa-check-circle"></i> Standard flooring (ceramic tiles)</li>
+                            <li><i class="fa fa-check-circle"></i> Single coat exterior paint</li>
+                            <li><i class="fa fa-check-circle"></i> Site supervision</li>
+                            <li><i class="fa fa-check-circle"></i> 6-month structural warranty</li>
+                            <li class="disabled"><i class="fa fa-times-circle"></i> False ceiling &amp; woodwork</li>
+                            <li class="disabled"><i class="fa fa-times-circle"></i> Modular kitchen</li>
+                            <li class="disabled"><i class="fa fa-times-circle"></i> Smart home provisions</li>
+                        </ul>
+                        <a href="contact.html" class="btn-pkg">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Standard (featured) -->
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="pkg-card featured w-100">
+                        <div class="pkg-badge">Most Popular</div>
+                        <div class="pkg-tier">Standard</div>
+                        <div class="pkg-name">Premium</div>
+                        <p class="pkg-tagline">Our most popular choice — premium finishes and full project handover support.</p>
+                        <div class="pkg-price">
+                            <span class="pkg-currency">₹</span>
+                            <span class="pkg-amount price-val" data-sqft="3000" data-project="34,20,000">3000</span>
+                            <span class="pkg-unit">/ sq.ft</span>
+                        </div>
+                        <ul class="pkg-features">
+                            <li><i class="fa fa-check-circle"></i> Premium AAC block construction</li>
+                            <li><i class="fa fa-check-circle"></i> Concealed plumbing &amp; wiring</li>
+                            <li><i class="fa fa-check-circle"></i> Vitrified tile flooring</li>
+                            <li><i class="fa fa-check-circle"></i> Two-coat exterior texture paint</li>
+                            <li><i class="fa fa-check-circle"></i> Dedicated site engineer</li>
+                            <li><i class="fa fa-check-circle"></i> False ceiling in living &amp; master bed</li>
+                            <li><i class="fa fa-check-circle"></i> Basic modular kitchen</li>
+                            <li><i class="fa fa-check-circle"></i> 1-year structural warranty</li>
+                            <li class="disabled"><i class="fa fa-times-circle"></i> Smart home provisions</li>
+                        </ul>
+                        <a href="contact.html" class="btn-pkg">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Luxury -->
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="pkg-card w-100">
+                        <div class="pkg-tier">Luxury</div>
+                        <div class="pkg-name">Elite</div>
+                        <p class="pkg-tagline">Uncompromising quality, bespoke interiors, and smart-home infrastructure built in.</p>
+                        <div class="pkg-price">
+                            <span class="pkg-currency">₹</span>
+                            <span class="pkg-amount price-val" data-sqft="4500" data-project="51,30,000">4500</span>
+                            <span class="pkg-unit">/ sq.ft</span>
+                        </div>
+                        <ul class="pkg-features">
+                            <li><i class="fa fa-check-circle"></i> Premium AAC block + steel structure</li>
+                            <li><i class="fa fa-check-circle"></i> Premium sanitary &amp; fittings</li>
+                            <li><i class="fa fa-check-circle"></i> Imported marble / wooden flooring</li>
+                            <li><i class="fa fa-check-circle"></i> Designer wall textures &amp; paints</li>
+                            <li><i class="fa fa-check-circle"></i> Senior engineer + architect on call</li>
+                            <li><i class="fa fa-check-circle"></i> Full false ceiling &amp; woodwork</li>
+                            <li><i class="fa fa-check-circle"></i> Fully modular kitchen</li>
+                            <li><i class="fa fa-check-circle"></i> Smart home provisions (wiring)</li>
+                            <li><i class="fa fa-check-circle"></i> 2-year structural warranty</li>
+                        </ul>
+                        <a href="contact.html" class="btn-pkg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center mt-4" style="font-size:12.5px;color:var(--grey-mid);">
+                * Prices are indicative and may vary based on site conditions, location, and design complexity. <a href="contact.html" style="color:var(--primary);font-weight:600;">Contact us</a> for a custom quote.
+            </p>
+        </div>
+    </div>
+
+    <!-- COST CALCULATOR -->
+    <div class="calc-section">
+        <div class="container">
+            <div class="text-center mb-2">
+                <span class="section-label">Estimate Instantly</span>
+                <h2 class="section-title">Home Construction Cost Calculator</h2>
+                <div class="section-divider center"></div>
+                <p class="calc-sub">Select your floors and package, enter the built-up area, and get an instant construction cost estimate.</p>
+            </div>
+
+            <div class="calc-wrap">
+                <div class="calc-form">
+                    <div class="calc-step">
+                        <label class="calc-step-label"><span>1.</span> How Many Floors Are You Planning to Build?</label>
+                        <div class="pill-group" id="floorGroup">
+                            <div class="pill-option"><input type="radio" name="floors" id="floor-0" value="0" checked><label for="floor-0">Ground</label></div>
+                            <div class="pill-option"><input type="radio" name="floors" id="floor-1" value="1"><label for="floor-1">G + 1</label></div>
+                            <div class="pill-option"><input type="radio" name="floors" id="floor-2" value="2"><label for="floor-2">G + 2</label></div>
+                            <div class="pill-option"><input type="radio" name="floors" id="floor-3" value="3"><label for="floor-3">G + 3</label></div>
+                            <div class="pill-option"><input type="radio" name="floors" id="floor-4" value="4"><label for="floor-4">G + 4</label></div>
+                        </div>
+                    </div>
+
+                    <div class="calc-step">
+                        <label class="calc-step-label"><span>2.</span> Select Your Preferred Package</label>
+                        <div class="pill-group" id="pkgGroup">
+                            <div class="pill-option pkg-pill"><input type="radio" name="pkg" id="pkg-basic" value="2500" checked><label for="pkg-basic">Basic <small>Rs.2500/sqft</small></label></div>
+                            <div class="pill-option pkg-pill"><input type="radio" name="pkg" id="pkg-premium" value="3000"><label for="pkg-premium">Premium <small>Rs.3000/sqft</small></label></div>
+                            <div class="pill-option pkg-pill"><input type="radio" name="pkg" id="pkg-elite" value="4500"><label for="pkg-elite">Elite <small>Rs.4500/sqft</small></label></div>
+                        </div>
+                    </div>
+
+                    <div class="calc-step">
+                        <label class="calc-step-label"><span>3.</span> Enter Built-Up Area for Each Floor</label>
+                        <div class="floor-inputs" id="floorInputs">
+                            <div class="floor-input-row active" data-floor="0">
+                                <label>Ground Floor</label>
+                                <div class="calc-input-group"><input type="number" min="0" class="floor-area" data-floor="0" placeholder="e.g. 1200"><span>sq.ft</span></div>
+                            </div>
+                            <div class="floor-input-row" data-floor="1">
+                                <label>First Floor</label>
+                                <div class="calc-input-group"><input type="number" min="0" class="floor-area" data-floor="1" placeholder="e.g. 1200"><span>sq.ft</span></div>
+                            </div>
+                            <div class="floor-input-row" data-floor="2">
+                                <label>Second Floor</label>
+                                <div class="calc-input-group"><input type="number" min="0" class="floor-area" data-floor="2" placeholder="e.g. 1200"><span>sq.ft</span></div>
+                            </div>
+                            <div class="floor-input-row" data-floor="3">
+                                <label>Third Floor</label>
+                                <div class="calc-input-group"><input type="number" min="0" class="floor-area" data-floor="3" placeholder="e.g. 1200"><span>sq.ft</span></div>
+                            </div>
+                            <div class="floor-input-row" data-floor="4">
+                                <label>Fourth Floor</label>
+                                <div class="calc-input-group"><input type="number" min="0" class="floor-area" data-floor="4" placeholder="e.g. 1200"><span>sq.ft</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc-step">
+                        <label class="calc-step-label"><span>4.</span> Optional Add-Ons</label>
+                        <div class="floor-inputs">
+                            <div>
+                                <label style="display:block;font-size:12px;font-weight:600;color:var(--grey-mid);margin-bottom:6px;">Water Sump Size (Rs.24/litre)</label>
+                                <div class="calc-input-group"><input type="number" min="0" id="sumpSize" placeholder="e.g. 9000"><span>litre</span></div>
+                            </div>
+                            <div>
+                                <label style="display:block;font-size:12px;font-weight:600;color:var(--grey-mid);margin-bottom:6px;">Compound Wall (Rs.425/sqft)</label>
+                                <div class="calc-input-group"><input type="number" min="0" id="wallSize" placeholder="e.g. 300"><span>sq.ft</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-summary">
+                    <h4>Estimate Summary</h4>
+                    <div class="calc-line"><span>Built-Up Area</span><span id="sumArea">0 sqft</span></div>
+                    <div class="calc-line"><span>Package Rate</span><span id="sumRate">Rs.2500/sqft</span></div>
+                    <div class="calc-line"><span>Construction Cost</span><span id="sumConstruction">Rs.0</span></div>
+                    <div class="calc-line"><span>Water Sump</span><span id="sumSump">Rs.0</span></div>
+                    <div class="calc-line"><span>Compound Wall</span><span id="sumWall">Rs.0</span></div>
+                    <div class="calc-total">
+                        <div class="calc-total-label">Total Estimated Cost</div>
+                        <div class="calc-total-amount" id="calcTotal">Rs.0</div>
+                        <a href="contact.html" class="btn-calc-cta">Get Free Estimate</a>
+                        <p class="calc-note">Indicative only. Final quote depends on site conditions and material selection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         DETAILED PACKAGE BREAKDOWN (full spec accordion per tier)
+         ═══════════════════════════════════════════════════ -->
+    <div class="pkg-detail-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Full Breakdown</span>
+                <h2 class="section-title">What Each Package Includes</h2>
+                <div class="section-divider center"></div>
+                <p style="color:var(--grey-mid);font-size:14px;max-width:600px;margin:0 auto;">
+                    Click any category below to see the exact materials, brands, and specifications covered under each package tier.
+                </p>
+            </div>
+            <div class="row">
+
+                <!-- Standard / Basic -->
+                <div class="col-lg-4 mb-4">
+                    <div class="pkg-detail-card">
+                        <div class="pkg-detail-header">
+                            <h5>Standard Package</h5>
+                            <h3>₹ 2,500 / Per Sqft</h3>
+                        </div>
+                        <div id="pkgAcc0">
+                            <div class="card border-0">
+                                <div class="card-header" id="ph0_0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#pc0_0">Design</button>
+                                </div>
+                                <div id="pc0_0" class="collapse show" data-parent="#pkgAcc0">
+                                    <div class="card-body"><ul><li>.Scheme Drawing: All Floors (2d)</li><li>.Elevation Design: (3d)</li><li>.Sectional Drawing: All Floors (3d)</li><li>.Structural Drawings</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph0_1">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc0_1">Project Management</button>
+                                </div>
+                                <div id="pc0_1" class="collapse" data-parent="#pkgAcc0">
+                                    <div class="card-body"><ul><li>.Site Engineer: Daily visit</li><li>.Project Manager: Visits site Twice a week</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph0_2">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc0_2">Structure</button>
+                                </div>
+                                <div id="pc0_2" class="collapse" data-parent="#pkgAcc0">
+                                    <div class="card-body"><ul><ul><li>Basement Height: Up to 3.5 feet</li><li>Steel: NGA, ARS or equivalent</li><li>Bricks: First Class Wire-Cut Chamber Bricks</li><li>Cement: Ramco / UltraTech</li><li>M-Sand: For Blockwork and All Masonry Works</li><li>P-Sand: For Plastering</li><li>Concrete: M20 Grade or as per Structural Drawing</li><li>RCC Raft for Basement</li><li>Ceiling Height: 10 feet</li><li>Steel Reinforcement: As per Structural Drawing</li><li>Parapet Wall: 3.5 feet Height</li></ul></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph0_3">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc0_3">Bathroom &amp; Plumbing</button>
+                                </div>
+                                <div id="pc0_3" class="collapse" data-parent="#pkgAcc0">
+                                    <div class="card-body"><ul>
+    <li>Wall Tiles: Up to Ceiling, 4×2 Vitrified Tiles up to ₹65/sqft</li><li>Bath &amp; CP Fittings: Parryware/Hindware up to ₹30,000 per Bathroom – Floor Mounted Single Piece EWC, Wall Mounted Wash Basin, Pillar Cock, Diverter, Overhead Shower, Bib Cock &amp; Health Faucet</li>
+    <li>Plumbing Pipes &amp; Fittings: Inner Wall CPVC, Outer Wall UPVC, PVC for Drain Line – Ashirvad or Equivalent</li><li>Overhead Tank: 2000 Litres, 5-Layer UV Protected White Colour Tank with Water Level Sensor</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph0_4">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc0_4">Flooring</button>
+                                </div>
+                                <div id="pc0_4" class="collapse" data-parent="#pkgAcc0">
+                                    <div class="card-body"><ul>
+    <li>Living, Dining, Bedrooms &amp; Kitchen: 4×2 Vitrified Tiles up to ₹75/sqft</li><li>Staircase: 4 ft Long Tiles</li><li>Car Parking: 500×500 mm Parking Tiles up to ₹55/sqft</li><li>Terrace Flooring: 1×1 White Cooling Tiles with Waterproofing</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph0_5">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc0_5">Kitchen</button>
+                                </div>
+                                <div id="pc0_5" class="collapse" data-parent="#pkgAcc0">
+                                    <div class="card-body"><ul>
+    <li>Wall Tiles: 4×2 Vitrified Tiles up to ₹65/sqft</li><li>Sink Faucet: Designer Brand up to ₹3,500 per Nos.</li><li>Sink: SS 304 Sink up to ₹5,000</li><li>Kitchen Countertop: Granite up to ₹160/sqft</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph0_6">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc0_6">Doors, Windows &amp; Railing</button>
+                                </div>
+                                <div id="pc0_6" class="collapse" data-parent="#pkgAcc0">
+                                    <div class="card-body"><ul>
+    <li>Main Door: African Teak Door &amp; Frame, 35 mm Thickness, Frame Size 6" × 4", Door Size 7' × 5', Single Door with Side Panel</li><li>Bedroom Doors: Flush Door with Laminate, African Teak Frame, Door Size 7' × 3'</li><li>Bathroom Doors: UPVC Door, Size 7' × 2'9"</li><li>Windows: Country Teak Wood Windows or uPVC Sliding (White), Size up to 4' × 4', No Restriction on Quantity, 5 mm Clear Glass</li><li>Staircase Railing: SS-304 Railing</li><li>Balcony Railing: SS-304 Railing</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph0_7">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc0_7">Painting</button>
+                                </div>
+                                <div id="pc0_7" class="collapse" data-parent="#pkgAcc0">
+                                    <div class="card-body"><ul>
+    <li>Inner Wall Putty: 2 Coats of Wall Putty – Birla or Asian</li><li>Wall Painting: 1 Coat of Primer + 2 Coats of Premium Emulsion – Asian Paints</li><li>Ceiling Painting: 1 Coat of Primer + 2 Coats of Premium Emulsion – Asian Paints</li><li>Exterior Paint: 1 Coat of Primer + 2 Coats of Asian Ultima Emulsion</li><li>Elevation Putty: 2 Coats of Putty for Elevation – Asian Waterproof</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph0_8">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc0_8">Electrical</button>
+                                </div>
+                                <div id="pc0_8" class="collapse" data-parent="#pkgAcc0">
+                                    <div class="card-body"><ul>
+    <li>Wires: Finolex (FRLS)</li><li>Switches: GM / Legrand</li><li>No Restriction on Number of Electrical Points, except for Lifts, DG, Curtain Motors, Swimming Pool, RO Plant, Pressure Pump, Intercom, Surveillance System, Exterior Light Points, Gate Automation, Lightning Arrester, Hybrid Solar Heater, Water Fountain, and HVAC Systems.</li><li>Electricity Panel Board: Single Service with RLCB – Exterior Grade</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph0_9">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc0_9">What's Not Included</button>
+                                </div>
+                                <div id="pc0_9" class="collapse" data-parent="#pkgAcc0">
+                                    <div class="card-body"><ul><li>Compound Wall @ 425/Sqft & Gate</li><li>Sump & Septic Tank @ 26/Litre</li><li>RCC Water Tank @ 35/Litre
+</li><li>Lift</li><li>Electricity Connection</li><li>Building Plan Approval</li><li>Elevation Special Materials</li><li>Borewell</li></ul></div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="btn-pkg-quote">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium -->
+                <div class="col-lg-4 mb-4">
+                    <div class="pkg-detail-card">
+                        <div class="pkg-detail-header tier-mid">
+                            <h5>Premium Package</h5>
+                            <h3>₹ 3,000 / Per Sqft</h3>
+                        </div>
+                        <div id="pkgAcc1">
+                            <div class="card border-0">
+                                <div class="card-header" id="ph1_0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#pc1_0">Design</button>
+                                </div>
+                                <div id="pc1_0" class="collapse show" data-parent="#pkgAcc1">
+                                    <div class="card-body"><ul><li>Scheme Drawing: All Floors (2D)</li><li>Elevation Design: (3D)</li><li>Sectional Drawing: All Floors (3D)</li><li>Electrical Drawings: All Floors (2D)</li><li>Plumbing Drawings: All Floors (2D)</li><li>Working Drawings: All Floors (2D)</li><li>Soil Test Report (If Required)</li><li>Structural Drawings</li><li>Furniture Layout: All Floors (2D)</li><li>Elevation Detail Drawing: (2D)</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph1_1">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc1_1">Project Management</button>
+                                </div>
+                                <div id="pc1_1" class="collapse" data-parent="#pkgAcc1">
+                                    <div class="card-body"><ul> <li>Site Engineer: Daily Site Visit</li><li>Project Manager: Daily Site Visit</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph1_2">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc1_2">Structure</button>
+                                </div>
+                                <div id="pc1_2" class="collapse" data-parent="#pkgAcc1">
+                                    <div class="card-body"><ul><li>Basement Height: Up to 3.5 feet</li><li>Steel: KISCOL or Equivalent</li><li>Bricks: First Class Wire-Cut Chamber Bricks</li><li>Cement: Ramco / UltraTech</li><li>M-Sand: For Blockwork and All Masonry Works</li><li>River Sand: For Plastering</li><li>Concrete: M20 Grade or as per Structural Drawing</li><li>RCC Raft for Basement</li><li>Ceiling Height: 10 feet</li><li>Steel Reinforcement: As per Structural Drawing</li><li>Parapet Wall: 3.5 feet Height</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph1_3">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc1_3">Bathroom &amp; Plumbing</button>
+                                </div>
+                                <div id="pc1_3" class="collapse" data-parent="#pkgAcc1">
+                                    <div class="card-body"><ul><li>Wall Tiles: Up to Ceiling, 4×2 Vitrified Tiles up to ₹75/sqft</li><li>Bath &amp; CP Fittings: Jaquar/Hindware up to ₹35,000 per Bathroom – Floor Mounted Single Piece EWC, Wall Mounted Wash Basin, Pillar Cock, Diverter, Overhead Shower, Bib Cock &amp; Health Faucet</li><li>Plumbing Pipes &amp; Fittings: Inner Wall CPVC, Outer Wall UPVC, PVC for Drain Line – Ashirvad or Equivalent</li><li>Overhead Tank: 2000 Litres, 5-Layer UV-Protected White Colour Tank with Water Level Sensor</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph1_4">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc1_4">Flooring</button>
+                                </div>
+                                <div id="pc1_4" class="collapse" data-parent="#pkgAcc1">
+                                    <div class="card-body"><ul><li>Living &amp; Dining: 6×4 Vitrified Tiles up to ₹85/sqft</li><li>Bedrooms &amp; Kitchen: 4×2 Vitrified Tiles up to ₹75/sqft</li><li>Staircase: Granite up to ₹160/sqft</li><li>Car Parking: 500×500 mm Parking Tiles up to ₹55/sqft</li><li>Terrace Flooring: 1×1 White Cooling Tiles with Waterproofing</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph1_5">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc1_5">Kitchen</button>
+                                </div>
+                                <div id="pc1_5" class="collapse" data-parent="#pkgAcc1">
+                                    <div class="card-body"><ul><li>Granite Counter</li><li>SS Sink</li><li>Wall Tiles</li><li>Modular Kitchen Provision</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph1_6">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc1_6">Doors, Windows &amp; Railing</button>
+                                </div>
+                                <div id="pc1_6" class="collapse" data-parent="#pkgAcc1">
+                                    <div class="card-body"><ul><li>Main Door: Mini Burma Teak Door &amp; Frame, 35 mm Thickness, Frame Size 6" × 4", Door Size 7' × 5', Single Door with Side Panel</li><li>Bedroom Doors: Flush Door with Laminate, African Teak Frame, Door Size 7' × 3'</li><li>Bathroom Doors: UPVC Door, Size 7' × 2'9"</li><li>Windows: Country Teak Wood Windows or uPVC Sliding (White), No Restriction on Size &amp; Quantity, 5 mm Clear Glass</li><li>Staircase Railing: SS-304 Railing</li><li>Balcony Railing: SS-304 Railing with 10 mm Toughened Glass</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph1_7">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc1_7">Painting</button>
+                                </div>
+                                <div id="pc1_7" class="collapse" data-parent="#pkgAcc1">
+                                    <div class="card-body"><ul><li>Inner Wall Putty: 2 Coats of Wall Putty – Birla or Asian</li><li>Wall Painting: 1 Coat of Primer + 2 Coats of Royale Emulsion – Asian Paints</li><li>Ceiling Painting: 1 Coat of Primer + 2 Coats of Premium Emulsion – Asian Paints</li><li>Exterior Paint: 1 Coat of Primer + 2 Coats of Asian Ultima Emulsion</li><li>Elevation Putty: 2 Coats of Putty for Elevation – Asian Waterproof</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph1_8">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc1_8">Electrical</button>
+                                </div>
+                                <div id="pc1_8" class="collapse" data-parent="#pkgAcc1">
+                                    <div class="card-body"><ul><li>Wires: Finolex (FRLS)</li><li>Switches: GM / Legrand</li><li>No Restriction on Number of Electrical Points, except for Lifts, DG, Curtain Motors, Swimming Pool, RO Plant, Pressure Pump, Intercom, Surveillance System, Exterior Light Points, Gate Automation, Lightning Arrester, Hybrid Solar Heater, Water Fountain, and HVAC Systems.</li><li>Electricity Panel Board: Single Service with RLCB – Exterior Grade</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph1_9">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc1_9">What's Not Included</button>
+                                </div>
+                                <div id="pc1_9" class="collapse" data-parent="#pkgAcc1">
+                                    <div class="card-body"><ul> <li>Compound Wall @ 425/Sqft &amp; Gate</li><li>Sump &amp; Septic Tank @ 26/Litre</li><li>RCC Water Tank @ 35/Litre</li><li>Lift</li><li>Electricity Connection</li><li>Building Plan Approval</li><li>Elevation Special Materials</li></ul></div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="btn-pkg-quote">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ultra Luxury / Elite -->
+                <div class="col-lg-4 mb-4">
+                    <div class="pkg-detail-card">
+                        <div class="pkg-detail-header tier-top">
+                            <h5>Ultra Luxury</h5>
+                            <h3>₹ 4,500 / Per Sqft</h3>
+                        </div>
+                        <div id="pkgAcc2">
+                            <div class="card border-0">
+                                <div class="card-header" id="ph2_0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#pc2_0">Design</button>
+                                </div>
+                                <div id="pc2_0" class="collapse show" data-parent="#pkgAcc2">
+                                    <div class="card-body"><ul><li>Scheme Drawing: All Floors (2D)</li><li>Elevation Design: (3D)</li><li>Sectional Drawing: All Floors (3D)</li><li>Electrical Drawings: All Floors (2D)</li><li>Plumbing Drawings: All Floors (2D)</li><li>Working Drawings: All Floors (2D)</li><li>Soil Test Report</li><li>Structural Drawings</li><li>Furniture Layout: All Floors (2D)</li><li>Elevation Detail Drawing: (2D)</li><li>Site Assessment &amp; Site Plan</li><li>Interior Views: All Floors (3D)</li><li>Interior Detailing: All Rooms (2D)</li><li>Landscaping Architectural Designs</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph2_1">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc2_1">Project Management</button>
+                                </div>
+                                <div id="pc2_1" class="collapse" data-parent="#pkgAcc2">
+                                    <div class="card-body"><ul><li>Site Engineer: Dedicated Full-Time Site Engineer</li> <li>Project Manager: Daily Site Visit</li><li>Architect: Dedicated Architect with Frequent Site Visits, Material &amp; Brand Selection Support, including Interior Design and Home Décor Assistance</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph2_2">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc2_2">Structure</button>
+                                </div>
+                                <div id="pc2_2" class="collapse" data-parent="#pkgAcc2">
+                                    <div class="card-body"><ul><li>Basement Height: Up to 5 feet</li><li>Steel: TATA Steel</li><li>Bricks: First Class Wire-Cut Chamber Bricks</li><li>Cement: Ramco / UltraTech</li><li>OPC Grade 53 Cement for Concrete &amp; Super Plaster for Plastering</li><li>M-Sand: For Blockwork and All Masonry Works</li><li>River Sand: For Plastering</li><li>Concrete: M25 Grade or as per Structural Drawing</li><li>RCC Raft for Basement</li><li>Ceiling Height: 11 feet</li><li>Steel Reinforcement: As per Structural Drawing</li> <li>Parapet Wall: 5 Feet Height with Toughened Glass Railing (If Required)</li><li>RCC Lift Pit: Included (If Required)</li><li>Lift Pit &amp; Shaft: Included (If Required)</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph2_3">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc2_3">Bathroom &amp; Plumbing</button>
+                                </div>
+                                <div id="pc2_3" class="collapse" data-parent="#pkgAcc2">
+                                    <div class="card-body"><ul><li>Wall Tiles: Up to Ceiling (Full Height), 4' × 2' Vitrified Tiles up to ₹95/sqft</li><li>Bath &amp; CP Fittings: Kohler up to ₹60,000 per Bathroom – Wall Mounted Concealed EWC, Counter Top Wash Basin, Granite Counter Slab, Pillar Cock, Health Faucet, Shower Set, and Thermostatic Diverter</li><li>Plumbing Pipes &amp; Fittings: Inner Wall CPVC, Outer Wall UPVC, PVC for Drain Line – Ashirvad or Equivalent</li><li>RCC Overhead Tank: Up to 5000 Litres with Waterproofing</li><li>Solar Heater Plumbing Lines: Included (If Required)</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph2_4">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc2_4">Flooring</button>
+                                </div>
+                                <div id="pc2_4" class="collapse" data-parent="#pkgAcc2">
+                                    <div class="card-body"><ul><li>Living, Dining, Bedrooms &amp; Kitchen: 6' × 4' Vitrified Tiles up to ₹160/sqft or Granite up to ₹160/sqft</li><li>Staircase: Granite up to ₹250/sqft</li><li>Car Parking: Natural Stone up to ₹120/sqft</li><li>Terrace Flooring: 2' × 2' Exterior Grade Vitrified Tiles (Any Grade) with Waterproofing and Surki using Traditional Kadukkai &amp; Jaggery Mix</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph2_5">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc2_5">Kitchen</button>
+                                </div>
+                                <div id="pc2_5" class="collapse" data-parent="#pkgAcc2">
+                                    <div class="card-body"><ul><li>Wall Tiles: Designer 4' × 2' Vitrified Tiles up to ₹85/sqft</li><li>Sink Faucet: Floor Mounted Pull-Out Faucet up to ₹8,000 per No.</li><li>Sink: Quartz Multifunction Sink up to ₹30,000</li><li>Dining: Premium Designer Wash Basin with Granite Countertop and Designer Tap</li><li>Kitchen Countertop: Quartz Stone or Nano White up to ₹350/sqft</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph2_6">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc2_6">Doors, Windows &amp; Railing</button>
+                                </div>
+                                <div id="pc2_6" class="collapse" data-parent="#pkgAcc2">
+                                    <div class="card-body"><ul><li>Main Door: Mini Burma Teak Designer Wooden Door, Size up to 8' × 5'</li><li>Room Doors: Teak Wood Door with African Teak Frame, Size 8' × 3'</li><li>Bathroom Doors: Waterproof Flush Door with Designer Laminates, Size 8' × 3'</li><li>Windows: Country Teak Wood Windows or uPVC Sliding (White), No Restriction on Size &amp; Quantity, 5 mm Clear Glass</li><li>Staircase Railing: Toughened Glass with SS, Wood, or Aluminium Railing</li><li>Balcony Railing: 10 mm Full Toughened Glass with Aluminium Railing</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph2_7">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc2_7">Painting</button>
+                                </div>
+                                <div id="pc2_7" class="collapse" data-parent="#pkgAcc2">
+                                    <div class="card-body"><ul><li>Inner Wall Putty: 2 Coats of Wall Putty – Birla or Asian</li><li>Wall Painting: 1 Coat of Primer + 2 Coats of Royale Shyne – Asian Paints</li><li>Ceiling Painting: 1 Coat of Primer + 2 Coats of Royale Shyne – Asian Paints</li><li>Exterior Paint: 1 Coat of Primer + 2 Coats of Apex Ultima Protek – Asian Paints</li><li>Elevation Putty: 2 Coats of Putty for Elevation – Asian Waterproof</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph2_8">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc2_8">Electrical</button>
+                                </div>
+                                <div id="pc2_8" class="collapse" data-parent="#pkgAcc2">
+                                    <div class="card-body"><ul><li>Wires: Finolex / Havells (FRLS)</li><li>Switches: Touch Switches with Glass Plates</li><li>No Restriction on Number of Electrical Points. Required Power Points will be provided for Lifts, DG, Curtain Motors, Swimming Pool, RO Plant, Pressure Pump, Intercom, Surveillance System, Exterior Light Points, Gate Automation, Lightning Arrester, Hybrid Solar Heater, Water Fountain, and HVAC Systems.</li><li>Electricity Panel Board: Up to 2 Service Connections with RLCB – Exterior Grade</li></ul></div>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <div class="card-header" id="ph2_9">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#pc2_9">What's Not Included</button>
+                                </div>
+                                <div id="pc2_9" class="collapse" data-parent="#pkgAcc2">
+                                    <div class="card-body"><ul><ul><li>Compound Wall @ 425/Sqft &amp; Gate</li><li>Sump &amp; Septic Tank @ 26/Litre</li><li>Lift</li><li>Electricity Connection</li><li>Building Plan Approval</li><li>Elevation Special Materials</li>
+</ul></ul></div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="btn-pkg-quote">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <p class="pkg-detail-note">The above rates are applicable for the build-up area of 2000 sqft and above</p>
+        </div>
+    </div>
+
+    <!-- COMPARE TABLE -->
+    <div class="compare-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Side-by-Side</span>
+                <h2 class="section-title">Package Comparison</h2>
+                <div class="section-divider center"></div>
+            </div>
+            <div class="table-responsive">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th style="width:34%">Feature</th>
+                            <th>Basic</th>
+                            <th class="featured-col">Premium</th>
+                            <th>Elite</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Structural Material</td>
+                            <td>Standard Brick</td>
+                            <td>AAC Block</td>
+                            <td>AAC + Steel</td>
+                        </tr>
+                        <tr>
+                            <td>Flooring</td>
+                            <td>Ceramic Tiles</td>
+                            <td>Vitrified Tiles</td>
+                            <td>Marble / Wood</td>
+                        </tr>
+                        <tr>
+                            <td>Plumbing &amp; Electrical</td>
+                            <td>Standard</td>
+                            <td>Concealed</td>
+                            <td>Premium Concealed</td>
+                        </tr>
+                        <tr>
+                            <td>Exterior Paint</td>
+                            <td>Single Coat</td>
+                            <td>Texture (2 coat)</td>
+                            <td>Designer Finish</td>
+                        </tr>
+                        <tr>
+                            <td>False Ceiling</td>
+                            <td><i class="fa fa-times cross"></i></td>
+                            <td>Living + Master Bed</td>
+                            <td>All Rooms</td>
+                        </tr>
+                        <tr>
+                            <td>Modular Kitchen</td>
+                            <td><i class="fa fa-times cross"></i></td>
+                            <td>Basic</td>
+                            <td>Fully Modular</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Home Wiring</td>
+                            <td><i class="fa fa-times cross"></i></td>
+                            <td><i class="fa fa-times cross"></i></td>
+                            <td><i class="fa fa-check check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Dedicated Site Engineer</td>
+                            <td><i class="fa fa-times cross"></i></td>
+                            <td><i class="fa fa-check check"></i></td>
+                            <td><i class="fa fa-check check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Structural Warranty</td>
+                            <td>6 Months</td>
+                            <td>1 Year</td>
+                            <td>2 Years</td>
+                        </tr>
+                        <tr>
+                            <td>3D Design Preview</td>
+                            <td><i class="fa fa-times cross"></i></td>
+                            <td><i class="fa fa-check check"></i></td>
+                            <td><i class="fa fa-check check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         NEW SECTION 1: CONSTRUCTION SPECIFICATIONS TABLE
+         ═══════════════════════════════════════════════════ -->
+    <div class="specs-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">In Detail</span>
+                <h2 class="section-title">Construction Specifications</h2>
+                <div class="section-divider center"></div>
+                <p style="color:var(--grey-mid);font-size:14px;max-width:600px;margin:0 auto;">
+                    A complete, transparent breakdown of the materials, grades, and standards used across every Mayura Construction project.
+                </p>
+            </div>
+            <div class="table-responsive specs-table-wrap">
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th style="width:18%">Category</th>
+                            <th style="width:27%">Specification</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Design</td><td class="spec-item">Architectural Design</td><td class="spec-val">Customised floor plans with elevation &amp; vastu compliance on request</td></tr>
+                        <tr><td class="spec-item">3D Elevation</td><td class="spec-val">Photo-realistic 3D exterior rendering before construction starts</td></tr>
+                        <tr><td class="spec-item">Interior Layout Planning</td><td class="spec-val">Room-wise furniture &amp; space planning included at design stage</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Structure</td><td class="spec-item">Structural Design</td><td class="spec-val">RCC framed structure, engineer-certified structural drawings</td></tr>
+                        <tr><td class="spec-item">Seismic Compliance</td><td class="spec-val">Designed as per IS 1893 earthquake-resistant guidelines</td></tr>
+                        <tr><td class="spec-item">Column &amp; Beam Sizing</td><td class="spec-val">Sized per structural load calculation, not standardised guesswork</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Foundation</td><td class="spec-item">Foundation Type</td><td class="spec-val">Isolated / raft footing based on soil test report</td></tr>
+                        <tr><td class="spec-item">Soil Testing</td><td class="spec-val">Mandatory soil investigation prior to foundation design</td></tr>
+                        <tr><td class="spec-item">Damp Proof Course</td><td class="spec-val">DPC layer at plinth level to prevent rising dampness</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Cement</td><td class="spec-item">Brand</td><td class="spec-val">UltraTech / ACC / Ramco or equivalent ISI-marked cement</td></tr>
+                        <tr><td class="spec-item">Grade</td><td class="spec-val">OPC 53 Grade for structural RCC work</td></tr>
+                        <tr><td class="spec-item">Storage</td><td class="spec-val">Site-stored on raised platforms, moisture-protected</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Steel</td><td class="spec-item">Brand</td><td class="spec-val">Tata Steel / JSW Steel TMT bars, Fe 500D grade</td></tr>
+                        <tr><td class="spec-item">Binding</td><td class="spec-val">As per structural drawing with proper lap &amp; cover blocks</td></tr>
+                        <tr><td class="spec-item">Corrosion Protection</td><td class="spec-val">Adequate concrete cover maintained to prevent rebar corrosion</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Bricks</td><td class="spec-item">Material</td><td class="spec-val">Table-moulded red bricks / AAC blocks (package dependent)</td></tr>
+                        <tr><td class="spec-item">Wall Thickness</td><td class="spec-val">9&quot; external walls, 4.5&quot; internal partition walls</td></tr>
+                        <tr><td class="spec-item">Masonry Bonding</td><td class="spec-val">English bond masonry with cement-sand mortar (1:6)</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="2">Sand</td><td class="spec-item">Type</td><td class="spec-val">River sand / M-sand, sieved &amp; free of impurities</td></tr>
+                        <tr><td class="spec-item">Usage</td><td class="spec-val">Separate grades for plastering, masonry &amp; concreting work</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Concrete Grade</td><td class="spec-item">Footing &amp; Foundation</td><td class="spec-val">M20 grade RMC / site-mix concrete</td></tr>
+                        <tr><td class="spec-item">Columns &amp; Beams</td><td class="spec-val">M20 – M25 grade as per structural design</td></tr>
+                        <tr><td class="spec-item">Slab</td><td class="spec-val">M20 grade with proper curing for 14+ days</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="2">Wall Finish</td><td class="spec-item">Internal Plastering</td><td class="spec-val">Smooth putty finish, double-coat internal plaster</td></tr>
+                        <tr><td class="spec-item">External Plastering</td><td class="spec-val">Sponge / texture finish with waterproofing additive</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Flooring</td><td class="spec-item">Living &amp; Bedrooms</td><td class="spec-val">Vitrified tiles / Kajaria tiles (2ft x 2ft, package dependent)</td></tr>
+                        <tr><td class="spec-item">Kitchen &amp; Utility</td><td class="spec-val">Anti-skid ceramic tiles</td></tr>
+                        <tr><td class="spec-item">Skirting</td><td class="spec-val">4&quot; matching tile skirting throughout</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Bathroom</td><td class="spec-item">Wall Tiles</td><td class="spec-val">Glazed ceramic tiles up to 7ft height</td></tr>
+                        <tr><td class="spec-item">Sanitary Fittings</td><td class="spec-val">Parryware / Jaquar CP fittings &amp; fixtures</td></tr>
+                        <tr><td class="spec-item">Waterproofing</td><td class="spec-val">Full-area waterproofing treatment before tiling</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Kitchen</td><td class="spec-item">Platform</td><td class="spec-val">Granite countertop with stainless steel sink</td></tr>
+                        <tr><td class="spec-item">Tiling</td><td class="spec-val">Dado tiling 2ft above counter</td></tr>
+                        <tr><td class="spec-item">Provision</td><td class="spec-val">Power &amp; plumbing points for chimney, RO &amp; dishwasher</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="2">Doors</td><td class="spec-item">Main Door</td><td class="spec-val">Engineered teak-finish door frame &amp; shutter</td></tr>
+                        <tr><td class="spec-item">Internal Doors</td><td class="spec-val">Flush doors with laminate finish</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="2">Windows</td><td class="spec-item">Frame &amp; Glass</td><td class="spec-val">UPVC / aluminium frames with 5mm clear glass &amp; mosquito mesh</td></tr>
+                        <tr><td class="spec-item">Ventilation</td><td class="spec-val">Cross-ventilation planning for every habitable room</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Plumbing</td><td class="spec-item">Pipes</td><td class="spec-val">Finolex CPVC (inner) &amp; UPVC (outer) piping</td></tr>
+                        <tr><td class="spec-item">Water Tank</td><td class="spec-val">Overhead RCC / sintex tank with proper plumbing layout</td></tr>
+                        <tr><td class="spec-item">Drainage</td><td class="spec-val">PVC drainage lines with proper gradient &amp; trap fittings</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="3">Electrical</td><td class="spec-item">Wiring</td><td class="spec-val">Havells / Finolex fire-retardant concealed copper wiring</td></tr>
+                        <tr><td class="spec-item">Switches &amp; Sockets</td><td class="spec-val">Havells modular switches with MCB distribution board</td></tr>
+                        <tr><td class="spec-item">Earthing</td><td class="spec-val">Independent earthing pit as per safety standards</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="2">Paint</td><td class="spec-item">Interior</td><td class="spec-val">Asian Paints / Berger premium emulsion, 2 coats</td></tr>
+                        <tr><td class="spec-item">Exterior</td><td class="spec-val">Weatherproof exterior emulsion, 2 coats with primer</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="2">Waterproofing</td><td class="spec-item">Terrace &amp; Wet Areas</td><td class="spec-val">Chemical waterproofing treatment with slope &amp; drainage</td></tr>
+                        <tr><td class="spec-item">Basement / Plinth</td><td class="spec-val">Damp-proofing treatment where applicable</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="2">Staircase</td><td class="spec-item">Structure</td><td class="spec-val">RCC staircase with granite / tile cladding</td></tr>
+                        <tr><td class="spec-item">Railing</td><td class="spec-val">MS / SS railing with handrail finish</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="2">Terrace</td><td class="spec-item">Flooring</td><td class="spec-val">Weatherproof tiling with brick-bat coba treatment</td></tr>
+                        <tr><td class="spec-item">Parapet Wall</td><td class="spec-val">Standard height parapet with optional railing</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="2">Warranty</td><td class="spec-item">Structural Warranty</td><td class="spec-val">6 months – 2 years depending on package selected</td></tr>
+                        <tr><td class="spec-item">Post-Handover Support</td><td class="spec-val">Dedicated support line for warranty-period concerns</td></tr>
+
+                        <tr class="cat-start"><td class="spec-cat" rowspan="2">Project Timeline</td><td class="spec-item">Typical Duration</td><td class="spec-val">8 – 14 months from foundation to handover, site-condition dependent</td></tr>
+                        <tr><td class="spec-item">Progress Reporting</td><td class="spec-val">Periodic milestone updates shared with the client</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center mt-4" style="font-size:12.5px;color:var(--grey-mid);">
+                * Specifications above are indicative for the Premium package tier and may vary slightly across Basic / Elite packages. <a href="contact.html" style="color:var(--primary);font-weight:600;">Request the full spec sheet</a> for your selected package.
+            </p>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         NEW SECTION 2: WHAT'S INCLUDED
+         ═══════════════════════════════════════════════════ -->
+    <div class="included-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Full Scope</span>
+                <h2 class="section-title">What's Included In Every Package</h2>
+                <div class="section-divider center"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <div class="included-card">
+                        <div class="included-icon"><i class="fa fa-drafting-compass"></i></div>
+                        <h4>Architectural Design</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <div class="included-card">
+                        <div class="included-icon"><i class="fa fa-cubes"></i></div>
+                        <h4>Structural Design</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <div class="included-card">
+                        <div class="included-icon"><i class="fa fa-cube"></i></div>
+                        <h4>3D Elevation</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <div class="included-card">
+                        <div class="included-icon"><i class="fa fa-bolt"></i></div>
+                        <h4>Electrical Drawings</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <div class="included-card">
+                        <div class="included-icon"><i class="fa fa-faucet"></i></div>
+                        <h4>Plumbing Drawings</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <div class="included-card">
+                        <div class="included-icon"><i class="fa fa-hard-hat"></i></div>
+                        <h4>Site Supervision</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <div class="included-card">
+                        <div class="included-icon"><i class="fa fa-clipboard-check"></i></div>
+                        <h4>Quality Checks</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <div class="included-card">
+                        <div class="included-icon"><i class="fa fa-truck"></i></div>
+                        <h4>Material Procurement</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <div class="included-card">
+                        <div class="included-icon"><i class="fa fa-tasks"></i></div>
+                        <h4>Project Management</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <div class="included-card">
+                        <div class="included-icon"><i class="fa fa-certificate"></i></div>
+                        <h4>Completion Certificate</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         NEW SECTION 3: CONSTRUCTION PROCESS (6-Step Timeline)
+         ═══════════════════════════════════════════════════ -->
+    <div class="process-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">How We Work</span>
+                <h2 class="section-title">Our Construction Process</h2>
+                <div class="section-divider center"></div>
+            </div>
+            <div class="row process-track">
+                <div class="col-lg-2 col-md-4 col-6 process-step">
+                    <div class="process-num">01</div>
+                    <h4>Consultation</h4>
+                    <p>Understanding your vision, budget &amp; requirements</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 process-step">
+                    <div class="process-num">02</div>
+                    <h4>Site Visit</h4>
+                    <p>Engineer-led site &amp; soil assessment</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 process-step">
+                    <div class="process-num">03</div>
+                    <h4>Design</h4>
+                    <p>Architectural plan &amp; 3D elevation finalised</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 process-step">
+                    <div class="process-num">04</div>
+                    <h4>Approval</h4>
+                    <p>Plan sanction &amp; permit assistance</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 process-step">
+                    <div class="process-num">05</div>
+                    <h4>Construction</h4>
+                    <p>Milestone-based build with quality checks</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 process-step">
+                    <div class="process-num">06</div>
+                    <h4>Handover</h4>
+                    <p>Final inspection &amp; completion certificate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         NEW SECTION 4: MATERIAL BRANDS
+         ═══════════════════════════════════════════════════ -->
+    <div class="brands-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Trusted Materials</span>
+                <h2 class="section-title">Brands We Build With</h2>
+                <div class="section-divider center"></div>
+                <p style="color:var(--grey-mid);font-size:14px;max-width:560px;margin:0 auto;">
+                    We source exclusively from India's most trusted material manufacturers — no compromises, no substitutes.
+                </p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>UltraTech</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>ACC</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>Ramco</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>Tata Steel</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>JSW Steel</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>Kajaria</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>Asian Paints</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>Berger</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>Finolex</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>Havells</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>Jaquar</span></div></div>
+                <div class="col-lg-2 col-md-3 col-4 mb-4"><div class="brand-box"><span>Parryware</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         NEW SECTION 5: WHY CHOOSE MAYURA CONSTRUCTION
+         ═══════════════════════════════════════════════════ -->
+    <div class="why-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Our Promise</span>
+                <h2 class="section-title">Why Choose Mayura Construction</h2>
+                <div class="section-divider center"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fa fa-file-invoice-dollar"></i></div>
+                        <h4>Transparent Pricing</h4>
+                        <p>No hidden costs. Every package is broken down clearly so you know exactly what you're paying for, upfront.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fa fa-award"></i></div>
+                        <h4>Branded Materials</h4>
+                        <p>Only trusted, ISI-certified brands go into your build — from cement and steel to fittings and finishes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fa fa-calendar-check"></i></div>
+                        <h4>On-time Delivery</h4>
+                        <p>Milestone-based scheduling and proactive site management to keep your project on track for handover.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fa fa-user-tie"></i></div>
+                        <h4>Dedicated Engineer</h4>
+                        <p>A dedicated site engineer oversees your project from foundation to finish — your single point of contact.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fa fa-search"></i></div>
+                        <h4>Quality Inspection</h4>
+                        <p>Multi-stage quality checks at every critical phase ensure workmanship meets our exacting standards.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fa fa-shield-alt"></i></div>
+                        <h4>Warranty Support</h4>
+                        <p>Structural warranty backed by responsive after-handover support for complete peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         NEW SECTION 6: GALLERY PREVIEW
+         ═══════════════════════════════════════════════════ -->
+    <div class="gallery-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Our Work</span>
+                <h2 class="section-title">Gallery Preview</h2>
+                <div class="section-divider center"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="img/gallery-1.jpg" alt="Mayura Construction project">
+                        <div class="gallery-overlay"><span><i class="fa fa-image"></i>Elite Villa, Madurai</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="img/gallery-2.jpg" alt="Mayura Construction project">
+                        <div class="gallery-overlay"><span><i class="fa fa-image"></i>Premium Residence</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="img/gallery-3.jpg" alt="Mayura Construction project">
+                        <div class="gallery-overlay"><span><i class="fa fa-image"></i>Modular Kitchen Fit-out</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="img/gallery-4.jpg" alt="Mayura Construction project">
+                        <div class="gallery-overlay"><span><i class="fa fa-image"></i>Basic Package Build</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="img/gallery-5.jpg" alt="Mayura Construction project">
+                        <div class="gallery-overlay"><span><i class="fa fa-image"></i>Site Under Construction</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="img/gallery-6.jpg" alt="Mayura Construction project">
+                        <div class="gallery-overlay"><span><i class="fa fa-image"></i>Finished Handover</span></div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-2" style="font-size:12.5px;color:var(--grey-mid);">
+                Replace the image paths above (<code>img/gallery-1.jpg</code> … <code>img/gallery-6.jpg</code>) with your own project photos.
+            </p>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         NEW SECTION 7: CUSTOMER TESTIMONIALS
+         ═══════════════════════════════════════════════════ -->
+    <div class="testimonial-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Client Stories</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="section-divider center"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <i class="fa fa-quote-left quote-icon"></i>
+                        <div class="testimonial-stars">
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </div>
+                        <p class="t-text">Mayura Construction delivered our home exactly as promised — on time, on budget, and with genuinely good quality materials. The dedicated engineer made all the difference.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">R</div>
+                            <div>
+                                <h5>Rajesh Kumar</h5>
+                                <span>Homeowner, Madurai</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <i class="fa fa-quote-left quote-icon"></i>
+                        <div class="testimonial-stars">
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </div>
+                        <p class="t-text">From the first site visit to handover, the process was transparent and well-managed. The Premium package gave us a beautiful finish without any surprise costs.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">P</div>
+                            <div>
+                                <h5>Priya Sundaram</h5>
+                                <span>Homeowner, Virattipathu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <i class="fa fa-quote-left quote-icon"></i>
+                        <div class="testimonial-stars">
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </div>
+                        <p class="t-text">We chose the Elite package for our renovation and couldn't be happier. Quality inspections at every stage gave us real confidence in the build.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">S</div>
+                            <div>
+                                <h5>Suresh Babu</h5>
+                                <span>Homeowner, Madurai</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Questions</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="section-divider center"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div id="faqAccordion">
+                        <div class="faq-card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#faq1">
+                                    <i class="fa fa-plus mr-2" style="color:var(--primary);font-size:12px"></i>
+                                    Can I customise a package to suit my requirements?
+                                </a>
+                            </div>
+                            <div id="faq1" class="collapse show" data-parent="#faqAccordion">
+                                <div class="card-body">Absolutely. All three packages serve as a starting point. We work with each client to tailor the scope, materials, and finishes to their exact needs and budget. Contact us for a no-obligation consultation.</div>
+                            </div>
+                        </div>
+                        <div class="faq-card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" href="#faq2">
+                                    <i class="fa fa-plus mr-2" style="color:var(--primary);font-size:12px"></i>
+                                    What is included in the project price estimate?
+                                </a>
+                            </div>
+                            <div id="faq2" class="collapse" data-parent="#faqAccordion">
+                                <div class="card-body">The per sq.ft rate covers civil work, structural materials, labour, basic MEP (mechanical, electrical, and plumbing), and standard finishes as described in each package. External approvals, compound walls, and landscaping are quoted separately.</div>
+                            </div>
+                        </div>
+                        <div class="faq-card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" href="#faq3">
+                                    <i class="fa fa-plus mr-2" style="color:var(--primary);font-size:12px"></i>
+                                    How long does a typical residential project take?
+                                </a>
+                            </div>
+                            <div id="faq3" class="collapse" data-parent="#faqAccordion">
+                                <div class="card-body">A standard 1,000 sq.ft residential build typically takes 8–12 months from groundbreaking to handover depending on the package, design complexity, and site conditions. We provide a detailed project timeline before work begins.</div>
+                            </div>
+                        </div>
+                        <div class="faq-card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" href="#faq4">
+                                    <i class="fa fa-plus mr-2" style="color:var(--primary);font-size:12px"></i>
+                                    What payment schedule do you follow?
+                                </a>
+                            </div>
+                            <div id="faq4" class="collapse" data-parent="#faqAccordion">
+                                <div class="card-body">We follow a milestone-based payment structure — typically split across 5–6 stages from foundation to handover. This ensures transparency and aligns payments with physical progress on site.</div>
+                            </div>
+                        </div>
+                        <div class="faq-card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" href="#faq5">
+                                    <i class="fa fa-plus mr-2" style="color:var(--primary);font-size:12px"></i>
+                                    Do you handle building plan approvals and permits?
+                                </a>
+                            </div>
+                            <div id="faq5" class="collapse" data-parent="#faqAccordion">
+                                <div class="card-body">Yes. Our team assists with plan drawing, municipality approvals, and all required construction permits. We guide you through the entire regulatory process so you can focus on your project.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA STRIP -->
+    <div class="cta-strip">
+        <div class="container">
+            <h2>Ready to Start Your Dream Project?</h2>
+            <p>Talk to our team today and get a free site evaluation and detailed cost estimate.</p>
+            <a href="https://api.whatsapp.com/send?phone=+919487862233" class="btn-cta-white">
+                <i class="fab fa-whatsapp"></i> WhatsApp Us Now
+            </a>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title" style="color:#fff">Contact Us</h2>
+                <div class="section-divider center"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="contact-block">
+                        <h3><i class="fa fa-map-marker-alt mr-2"></i>Office Address</h3>
+                        <p>No.16, Muthu Thevar Colony, 3rd Cross Street,<br>Virattipathu, Madurai – 625016</p>
+                    </div>
+                    <div class="contact-block">
+                        <h3><i class="fa fa-phone mr-2"></i>Phone</h3>
+                        <a href="tel:+919487862233">+91 94878 62233</a>
+                        <a href="tel:+919597462233">+91 95974 62233</a>
+                    </div>
+                    <div class="contact-block">
+                        <h3><i class="fa fa-envelope mr-2"></i>Email</h3>
+                        <a href="mailto:mayuraconstruction25@gmail.com">mayuraconstruction25@gmail.com</a>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=+919487862233" class="whatsapp-btn mt-3">
+                        <i class="fab fa-whatsapp fa-lg"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.1!2d78.119!3d9.9252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTUnMzAuNyJOIDc4wrAwNycwOC40IkU!5e0!3m2!1sen!2sin!4v1"
+                        width="100%" height="380" style="border:0;filter:grayscale(40%)" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>No.16, Muthu Thevar Colony, 3rd Cross Street, Virattipathu, Madurai – 625016</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 94878 62233</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 95974 62233</p>
+                    <p><i class="fa fa-envelope mr-2"></i>mayuraconstruction25@gmail.com</p>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Service Areas</h2>
+                    <a href="">Building Construction</a>
+                    <a href="">House Renovation</a>
+                    <a href="">Architecture Design</a>
+                    <a href="">Interior Design</a>
+                    <a href="">Painting</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Useful Pages</h2>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="team.html">Our Team</a>
+                    <a href="portfolio.html">Projects</a>
+                    <a href="package.html">Packages</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Newsletter</h2>
+                    <p>Stay informed with the latest updates, news, and exclusive content delivered straight to your inbox.</p>
+                    <div class="newsletter-input">
+                        <input type="email" placeholder="Your email address">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <a href="">MAYURA CONSTRUCTION & INFRASTRUCTURE</a>. All Rights Reserved.</p>
+                <div class="footer-menu">
+                    <a href="">Terms of Use</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Cookies</a>
+                    <a href="">Help</a>
+                    <a href="">FAQs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top" style="display:flex"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Back to top
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) { $('.back-to-top').fadeIn(); }
+            else { $('.back-to-top').fadeOut(); }
+        });
+        $('.back-to-top').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 400);
+            return false;
+        });
+
+        // Billing toggle — switch between per sq.ft and full project price display
+        const toggle = document.getElementById('billingToggle');
+        toggle.addEventListener('change', function () {
+            const isProject = this.checked;
+            document.querySelectorAll('.price-val').forEach(el => {
+                el.textContent = isProject ? el.dataset.project : el.dataset.sqft;
+            });
+            document.querySelectorAll('.pkg-unit').forEach(el => {
+                el.textContent = isProject ? '/ project est.' : '/ sq.ft';
+            });
+        });
+
+        (function () {
+            const fmt = n => 'Rs.' + Math.round(n).toLocaleString('en-IN');
+            const floorRadios = document.querySelectorAll('input[name="floors"]');
+            const pkgRadios = document.querySelectorAll('input[name="pkg"]');
+            const floorRows = document.querySelectorAll('.floor-input-row');
+            const areaInputs = document.querySelectorAll('.floor-area');
+            const sumpInput = document.getElementById('sumpSize');
+            const wallInput = document.getElementById('wallSize');
+            const sumArea = document.getElementById('sumArea');
+            const sumRate = document.getElementById('sumRate');
+            const sumConstruction = document.getElementById('sumConstruction');
+            const sumSump = document.getElementById('sumSump');
+            const sumWall = document.getElementById('sumWall');
+            const calcTotal = document.getElementById('calcTotal');
+
+            function updateVisibleFloors() {
+                const maxFloor = parseInt(document.querySelector('input[name="floors"]:checked').value, 10);
+                floorRows.forEach(row => {
+                    const f = parseInt(row.dataset.floor, 10);
+                    row.classList.toggle('active', f <= maxFloor);
+                });
+                calculate();
+            }
+
+            function calculate() {
+                const maxFloor = parseInt(document.querySelector('input[name="floors"]:checked').value, 10);
+                const rate = parseFloat(document.querySelector('input[name="pkg"]:checked').value);
+                let totalArea = 0;
+                areaInputs.forEach(input => {
+                    const f = parseInt(input.dataset.floor, 10);
+                    if (f <= maxFloor) totalArea += parseFloat(input.value) || 0;
+                });
+                const constructionCost = totalArea * rate;
+                const sumpCost = (parseFloat(sumpInput.value) || 0) * 24;
+                const wallCost = (parseFloat(wallInput.value) || 0) * 425;
+                const total = constructionCost + sumpCost + wallCost;
+
+                sumArea.textContent = totalArea.toLocaleString('en-IN') + ' sqft';
+                sumRate.textContent = 'Rs.' + rate.toLocaleString('en-IN') + '/sqft';
+                sumConstruction.textContent = fmt(constructionCost);
+                sumSump.textContent = fmt(sumpCost);
+                sumWall.textContent = fmt(wallCost);
+                calcTotal.textContent = fmt(total);
+            }
+
+            floorRadios.forEach(r => r.addEventListener('change', updateVisibleFloors));
+            pkgRadios.forEach(r => r.addEventListener('change', calculate));
+            areaInputs.forEach(i => i.addEventListener('input', calculate));
+            sumpInput.addEventListener('input', calculate);
+            wallInput.addEventListener('input', calculate);
+
+            updateVisibleFloors();
+        })();
+    </script>
+</body>
+</html>

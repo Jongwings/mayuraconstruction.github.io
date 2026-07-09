@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="team, mayura, Mayura Construction, Building, Infrastructure, Madurai">
+    <meta name="description" content="Our Team – Mayura Construction & Infrastructure">
+    <title>Our Team – MAYURA CONSTRUCTION & INFRASTRUCTURE</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #C8A96E;
+            --primary-dark: #A8893E;
+            --dark: #1A1A1A;
+            --grey-dark: #3A3A3A;
+            --grey-mid: #6B6B6B;
+            --grey-light: #ABABAB;
+            --bg-off: #F7F6F4;
+            --bg-white: #FFFFFF;
+            --border: #E8E4DC;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--dark);
+            background: var(--bg-white);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        h1, h2, h3, h4 { font-family: var(--font-display); }
+        a { text-decoration: none; color: inherit; }
+
+                /* ─── TOP BAR ─── */
+        .top-bar {
+            background: var(--dark);
+            padding: 10px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .top-bar .logo img { height: 60px; width: auto; object-fit: contain; }
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 6px 0;
+        }
+        .top-bar-icon {
+            width: 42px; height: 42px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .top-bar-icon i { color: #fff; font-size: 16px; }
+        .top-bar-text h3 { font-family: var(--font-body); font-size: 11px; font-weight: 600; color: var(--grey-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+        .top-bar-text p, .top-bar-text a { font-size: 13px; color: #fff; display: block; }
+        .top-bar-text a:hover { color: var(--primary); }
+
+        /* ─── NAVBAR ─── */
+        .nav-bar {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .navbar { padding: 0; }
+        .navbar-brand { font-family: var(--font-display); font-size: 13px; color: var(--primary) !important; letter-spacing: 2px; text-transform: uppercase; display: none; }
+        .nav-item.nav-link {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--grey-dark) !important;
+            padding: 22px 20px !important;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .nav-item.nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 20px; right: 20px;
+            height: 2px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.25s;
+        }
+        .nav-item.nav-link:hover::after,
+        .nav-item.nav-link.active::after { transform: scaleX(1); }
+        .nav-item.nav-link:hover,
+        .nav-item.nav-link.active { color: var(--primary) !important; }
+        .navbar-toggler { border-color: var(--border); }
+
+        /* ─── PAGE HEADER ── */
+        .page-header {
+            background: var(--dark); padding: 70px 0;
+            position: relative; overflow: hidden;
+        }
+        .page-header::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(200,169,110,0.15) 0%, transparent 60%);
+        }
+        .page-header::after {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+            height: 3px; background: var(--primary);
+        }
+        .page-header h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: #fff; margin-bottom: 12px; position: relative; }
+        .breadcrumb-nav { display: flex; align-items: center; gap: 10px; position: relative; }
+        .breadcrumb-nav a { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+        .breadcrumb-nav a:hover { color: var(--primary); }
+        .breadcrumb-nav .sep { color: var(--primary); font-size: 10px; }
+        .breadcrumb-nav .current { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--primary); }
+
+        /* ── SECTION ── */
+        .section-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); margin-bottom: 12px; }
+        .section-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--dark); line-height: 1.2; margin-bottom: 16px; }
+        .section-divider { width: 50px; height: 3px; background: var(--primary); margin: 16px 0 28px; }
+        .section-divider.center { margin: 16px auto 28px; }
+
+        /* ── TEAM SECTION ── */
+        .team-section { padding: 100px 0; background: var(--bg-off); }
+
+        .team-card { margin-bottom: 32px; }
+        .team-img-wrap {
+            position: relative; overflow: hidden; height: 300px;
+        }
+        .team-img-wrap img {
+            width: 100%; height: 100%; object-fit: cover;
+            object-position: top;
+            transition: transform 0.4s;
+        }
+        .team-card:hover .team-img-wrap img { transform: scale(1.05); }
+
+        /* Placeholder avatar when no photo */
+        .team-img-placeholder {
+            width: 100%; height: 300px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--grey-dark) 100%);
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center; gap: 12px;
+        }
+        .team-img-placeholder i { font-size: 64px; color: rgba(200,169,110,0.4); }
+        .team-img-placeholder span { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+
+        /* Social overlay */
+        .team-social-overlay {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: var(--primary); padding: 14px;
+            display: flex; justify-content: center; gap: 16px;
+            transform: translateY(100%); transition: transform 0.3s;
+        }
+        .team-card:hover .team-social-overlay { transform: translateY(0); }
+        .team-social-overlay a { color: #fff; font-size: 14px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.15); border-radius: 50%; transition: background 0.2s; }
+        .team-social-overlay a:hover { background: rgba(255,255,255,0.3); }
+
+        /* Info below */
+        .team-info {
+            background: #fff; padding: 22px 24px;
+            border: 1px solid var(--border); border-top: 3px solid var(--primary);
+            text-align: center;
+        }
+        .team-info h3 { font-size: 19px; font-weight: 700; margin-bottom: 4px; color: var(--dark); }
+        .team-info .role { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 12px; display: block; }
+        .team-info p { font-size: 13px; color: var(--grey-mid); margin: 0; }
+
+        /* ── VALUES STRIP ── */
+        .values-strip {
+            background: var(--dark); padding: 70px 0;
+            border-top: 3px solid var(--primary);
+        }
+        .value-item { text-align: center; padding: 20px; }
+        .value-icon { width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+        .value-icon i { font-size: 24px; color: #fff; }
+        .value-item h3 { font-family: var(--font-body); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #fff; margin-bottom: 8px; }
+        .value-item p { font-size: 13px; color: rgba(255,255,255,0.5); margin: 0; }
+
+        /* ── JOIN US ── */
+        .join-section {
+            padding: 100px 0; background: var(--bg-white);
+            text-align: center;
+        }
+        .join-section p { font-size: 15px; color: var(--grey-mid); max-width: 600px; margin: 0 auto 32px; }
+        .btn-join {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--primary); color: #fff;
+            padding: 14px 36px; font-size: 12px; font-weight: 700;
+            letter-spacing: 2px; text-transform: uppercase; border: none;
+            transition: background 0.25s, transform 0.2s;
+        }
+        .btn-join:hover { background: var(--primary-dark); color: #fff; transform: translateY(-2px); }
+
+        /* ── FOOTER ── */
+        .footer { background: #111; padding: 70px 0 0; border-top: 3px solid var(--primary); }
+        .footer h2 { font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #222; }
+        .footer p, .footer a { font-size: 13.5px; color: rgba(255,255,255,0.55); display: block; margin-bottom: 8px; }
+        .footer a:hover { color: var(--primary); }
+        .footer-social { display: flex; gap: 10px; margin-top: 16px; }
+        .footer-social a { width: 36px; height: 36px; background: #222; color: rgba(255,255,255,0.6); display: flex; align-items: center; justify-content: center; font-size: 13px; transition: background 0.2s, color 0.2s; }
+        .footer-social a:hover { background: var(--primary); color: #fff; }
+        .footer-bottom { margin-top: 50px; padding: 20px 0; border-top: 1px solid #222; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .footer-bottom p { font-size: 12.5px; color: rgba(255,255,255,0.35); margin: 0; }
+        .footer-bottom a { display: inline; color: var(--primary); }
+        .footer-menu { display: flex; gap: 20px; flex-wrap: wrap; }
+        .footer-menu a { display: inline; font-size: 11.5px; color: rgba(255,255,255,0.4); margin: 0; }
+        .footer-menu a:hover { color: var(--primary); }
+        .newsletter-input { display: flex; margin-top: 14px; }
+        .newsletter-input input { flex: 1; padding: 11px 16px; background: #1a1a1a; border: 1px solid #2a2a2a; color: #fff; font-size: 13px; outline: none; }
+        .newsletter-input input::placeholder { color: rgba(255,255,255,0.3); }
+        .newsletter-input button { padding: 11px 20px; background: var(--primary); color: #fff; border: none; font-size: 12px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+        .newsletter-input button:hover { background: var(--primary-dark); }
+
+        .back-to-top { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; background: var(--primary); color: #fff; display: none; align-items: center; justify-content: center; font-size: 14px; z-index: 999; transition: background 0.2s; }
+        .back-to-top:hover { background: var(--primary-dark); color: #fff; }
+
+        @media (max-width: 768px) {
+            .team-img-wrap, .team-img-placeholder { height: 260px; }
+        }
+        @media (max-width: 991px) {
+            .navbar-brand { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+        <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-6">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/logo.jpg" alt="Mayura Construction Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 d-none d-lg-block">
+                    <div class="row justify-content-end">
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-clock"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Opening Hour</h3>
+                                    <p>Mon – Sat, 8:00 – 9:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-phone"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Call Us</h3>
+                                    <a href="tel:+919487862233">+91 94878 62233</a>
+                                    <a href="tel:+919597462233">+91 95974 62233</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="top-bar-item">
+                                <div class="top-bar-icon"><i class="fa fa-envelope"></i></div>
+                                <div class="top-bar-text">
+                                    <h3>Email Us</h3>
+                                    <a href="mailto:mayuraconstruction25@gmail.com">mayuraconstruction25@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- NAVBAR -->
+    <div class="nav-bar">
+        <div class="container-fluid px-4">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="index.html" class="navbar-brand">MAYURA</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="team.html" class="nav-item nav-link active">Team</a>
+                        <a href="package.html" class="nav-item nav-link active">Packages</a>
+                        <a href="our-projects.html" class="nav-item nav-link">Portfolio</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <span class="sep"><i class="fa fa-chevron-right"></i></span>
+                <span class="current">Our Team</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEAM SECTION -->
+    <div class="team-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">The People Behind the Work</span>
+                <h2 class="section-title">Meet Our Expert Team</h2>
+                <div class="section-divider center"></div>
+                <p style="max-width:600px; margin:0 auto; color:var(--grey-mid); font-size:14.5px;">
+                    Our strength lies in the people who bring skill, dedication, and passion to every project. Meet the talented professionals who make Mayura Construction a trusted name in the industry.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <!-- Team Member 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <!-- Replace src with actual photo: <img src="img/team1.jpg" alt="Name"> -->
+                            <div class="team-img-placeholder">
+                                <i class="fa fa-user"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                            <div class="team-social-overlay">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <!-- Replace with actual name & role -->
+                            <h3>Team Member</h3>
+                            <span class="role">Civil Engineer</span>
+                            <p>Dedicated professional with expertise in structural engineering and project management.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <div class="team-img-placeholder">
+                                <i class="fa fa-user"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                            <div class="team-social-overlay">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Team Member</h3>
+                            <span class="role">Lead Architect</span>
+                            <p>Creative visionary who blends functionality with aesthetic brilliance in every design.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <div class="team-img-placeholder">
+                                <i class="fa fa-user"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                            <div class="team-social-overlay">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Team Member</h3>
+                            <span class="role">Interior Designer</span>
+                            <p>Specialist in creating inspiring, functional interiors tailored to every client's vision.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <div class="team-img-placeholder">
+                                <i class="fa fa-user"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                            <div class="team-social-overlay">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Team Member</h3>
+                            <span class="role">Project Manager</span>
+                            <p>Ensures every project is delivered on time, within budget, and to the highest standard.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <div class="team-img-placeholder">
+                                <i class="fa fa-user"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                            <div class="team-social-overlay">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Team Member</h3>
+                            <span class="role">Site Supervisor</span>
+                            <p>Experienced supervisor maintaining quality control and safety standards across all sites.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <div class="team-img-placeholder">
+                                <i class="fa fa-user"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                            <div class="team-social-overlay">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Team Member</h3>
+                            <span class="role">Structural Engineer</span>
+                            <p>Expert in structural design and safety, ensuring every building stands the test of time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <div class="team-img-placeholder">
+                                <i class="fa fa-user"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                            <div class="team-social-overlay">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Team Member</h3>
+                            <span class="role">Quantity Surveyor</span>
+                            <p>Skilled at cost planning and budgeting, delivering maximum value for every rupee spent.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 8 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-wrap">
+                            <div class="team-img-placeholder">
+                                <i class="fa fa-user"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                            <div class="team-social-overlay">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Team Member</h3>
+                            <span class="role">Client Relations</span>
+                            <p>Committed to ensuring a seamless, transparent experience for every client from start to finish.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- VALUES STRIP -->
+    <div class="values-strip">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fa fa-users"></i></div>
+                        <h3>50+ Experts</h3>
+                        <p>A skilled, multi-disciplinary team across all construction specialties.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fa fa-graduation-cap"></i></div>
+                        <h3>Qualified</h3>
+                        <p>Each team member is certified and trained to the highest industry standards.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fa fa-handshake"></i></div>
+                        <h3>Client-Focused</h3>
+                        <p>We listen, collaborate, and deliver exactly what our clients envision.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fa fa-trophy"></i></div>
+                        <h3>Award-Worthy</h3>
+                        <p>A track record of exceptional work recognised across the industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JOIN THE TEAM -->
+    <div class="join-section">
+        <div class="container">
+            <span class="section-label">Careers</span>
+            <h2 class="section-title">Want to Join Our Team?</h2>
+            <div class="section-divider center"></div>
+            <p>We are always looking for passionate, skilled professionals who share our commitment to quality and excellence. If you believe you have what it takes, we'd love to hear from you.</p>
+            <a href="contact.html" class="btn-join">Get in Touch <i class="fa fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>No.16, Muthu Thevar Colony, 3rd Cross Street, Virattipathu, Madurai – 625016</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 94878 62233</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 95974 62233</p>
+                    <p><i class="fa fa-envelope mr-2"></i>mayuraconstruction25@gmail.com</p>
+                    <div class="footer-social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Service Areas</h2>
+                    <a href="service.html">Building Construction</a>
+                    <a href="service.html">House Renovation</a>
+                    <a href="service.html">Architecture Design</a>
+                    <a href="service.html">Interior Design</a>
+                    <a href="service.html">Painting</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Useful Pages</h2>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="team.html">Our Team</a>
+                    <a href="portfolio.html">Projects</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5">
+                    <h2>Newsletter</h2>
+                    <p>Stay informed with the latest updates and exclusive content delivered straight to your inbox.</p>
+                    <div class="newsletter-input">
+                        <input type="email" placeholder="Your email address">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <a href="index.html">MAYURA CONSTRUCTION & INFRASTRUCTURE</a>. All Rights Reserved.</p>
+                <div class="footer-menu">
+                    <a href="">Terms of Use</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Cookies</a>
+                    <a href="">Help</a>
+                    <a href="">FAQs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) { $('.back-to-top').fadeIn(); }
+            else { $('.back-to-top').fadeOut(); }
+        });
+        $('.back-to-top').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 400);
+            return false;
+        });
+        new WOW().init();
+    </script>
+</body>
+</html>
